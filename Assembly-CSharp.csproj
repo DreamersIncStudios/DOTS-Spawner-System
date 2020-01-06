@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Entities\EnemySpawnPoint.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

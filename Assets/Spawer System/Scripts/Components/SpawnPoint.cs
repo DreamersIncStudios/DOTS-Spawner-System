@@ -1,18 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Entities;
 
-public class SpawnPoint : MonoBehaviour
+namespace SpawnerSystem
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+ public struct SpawnPointComponent : IComponentData {
+        public bool Temporoary;
         
+
+    }
+    public struct PlayerSpawnTag : IComponentData{ }
+    public struct EnemySpawnTag : IComponentData {
+        public int MaxLevel;
+    }
+    public struct ItemSpawnTag : IComponentData { }
+    public struct LootSpawnTag : IComponentData { }
+
+    [System.Serializable]
+    public struct EnemyGO : ISharedComponentData {
+        public GameObject Enemy;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
