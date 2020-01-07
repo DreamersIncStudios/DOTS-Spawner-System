@@ -17,10 +17,8 @@ namespace SpawnerSystem
     public struct ItemSpawnTag : IComponentData { }
     public struct LootSpawnTag : IComponentData { }
 
-    [System.Serializable]
-    public struct EnemyGO : ISharedComponentData {
-        public GameObject Enemy;
+    public struct EnemySpawnData {
+        public int SpawnID;
 
     }
-
 }
