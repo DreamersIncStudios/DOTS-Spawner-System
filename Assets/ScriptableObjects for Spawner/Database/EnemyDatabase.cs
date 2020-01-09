@@ -17,7 +17,7 @@ namespace SpawnerSystem
         static public void LoadDatabase() {
             if (IsLoaded)
                 return;
-            
+            LoadDatabaseForce();
         }
         static public void LoadDatabaseForce() {
             ValidateDatebase();

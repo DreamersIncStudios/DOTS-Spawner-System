@@ -17,8 +17,12 @@ namespace SpawnerSystem
     public struct ItemSpawnTag : IComponentData { }
     public struct LootSpawnTag : IComponentData { }
 
-    public struct EnemySpawnData {
+    [System.Serializable]
+    public struct EnemySpawnData:IBufferElementData {
         public int SpawnID;
 
+
+        public static implicit operator int(EnemySpawnData e) { return e; }
+        public static implicit operator EnemySpawnData(int e) { return new EnemySpawnData { SpawnID = e }; }
     }
 }

@@ -68,7 +68,9 @@
     <Compile Include="Assets\ScriptableObjects for Spawner\Interface\iCharacterData.cs" />
     <Compile Include="Assets\ScriptableObjects for Spawner\SpawnableSO.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Components\WaveSpawnMasterComponents.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Entities\EnemySpawnPoint.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Entities\SpawnMaster.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

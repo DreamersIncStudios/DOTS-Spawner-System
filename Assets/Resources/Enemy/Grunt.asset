@@ -10,6 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eede3d6dfd4881f4fa0c19c4483c4c31, type: 3}
-  m_Name: NewSpawnerSystem.Enemy
+  m_Name: Grunt
   m_EditorClassIdentifier: 
-  _spawnID: 0
+  _spawnID: 1
+  _name: Grunt
+  _level: 2
+  _baseHealth: 100
+  _baseMana: 100
+  _GO: {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
+  _scale: {x: 1, y: 1, z: 1}

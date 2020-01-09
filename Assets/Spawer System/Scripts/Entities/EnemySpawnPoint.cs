@@ -9,26 +9,22 @@ namespace SpawnerSystem
     {
         public int MaxEnemyLevel;
 
-        public GameObject[] EnemiesAvailableForSpawn;
+        public List<int> SpawnIDList;
+
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
             var Spawnpoint = new SpawnPointComponent();
             dstManager.AddComponentData(entity, Spawnpoint);
             var EnemySpawn = new EnemySpawnTag() { MaxLevel = MaxEnemyLevel };
             dstManager.AddComponentData(entity, EnemySpawn);
+            DynamicBuffer<EnemySpawnData> buffer =  dstManager.AddBuffer<EnemySpawnData>(entity);
+
+            foreach (int SpawnID in SpawnIDList)
+            {
+                buffer.Add(new EnemySpawnData() { SpawnID = SpawnID});
+            }
 
         }
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }
