@@ -180,9 +180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxEnemyLevel: 10
   SpawnIDList: 0100000001000000
-  EnemiesAvailableForSpawn:
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &314637626
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,9 +239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxEnemyLevel: 10
   SpawnIDList: 0100000001000000
-  EnemiesAvailableForSpawn:
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &377295257
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,9 +298,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxEnemyLevel: 10
   SpawnIDList: 0100000001000000
-  EnemiesAvailableForSpawn:
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &631860972
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,9 +357,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxEnemyLevel: 10
   SpawnIDList: 0100000001000000
-  EnemiesAvailableForSpawn:
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,9 +508,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxEnemyLevel: 10
   SpawnIDList: 0100000001000000
-  EnemiesAvailableForSpawn:
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,9 +688,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxEnemyLevel: 10
   SpawnIDList: 0100000001000000
-  EnemiesAvailableForSpawn:
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &1462224203
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,9 +747,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxEnemyLevel: 10
   SpawnIDList: 0100000001000000
-  EnemiesAvailableForSpawn:
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &1623549171
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,9 +806,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxEnemyLevel: 10
   SpawnIDList: 0100000001000000
-  EnemiesAvailableForSpawn:
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
-  - {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &1705337953
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,11 +912,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyWaves:
-  - WaveNumber: 0
-    EnemiesForWave: []
-    RewardGold: 0
-    RewardEXP: 0
-    RewardSpawnID: 0
+  - WaveNumber: 1
+    EnemiesForWave:
+    - spawnID: 1
+      SpawnCount: 10
+      level: 2
+    - spawnID: 1
+      SpawnCount: 30
+      level: 2
+    RewardGold: 10
+    RewardEXP: 10
+    RewardSpawnID: 10
+  - WaveNumber: 1
+    EnemiesForWave:
+    - spawnID: 0
+      SpawnCount: 0
+      level: 0
+    - spawnID: 0
+      SpawnCount: 0
+      level: 0
+    - spawnID: 0
+      SpawnCount: 0
+      level: 0
+    - spawnID: 0
+      SpawnCount: 0
+      level: 0
+    - spawnID: 0
+      SpawnCount: 0
+      level: 0
+    RewardGold: 10
+    RewardEXP: 10
+    RewardSpawnID: 10
   CurLevel: 0
 --- !u!4 &1822741312
 Transform:

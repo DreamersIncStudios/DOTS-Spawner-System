@@ -7,36 +7,43 @@ using Unity.Transforms;
 
 namespace SpawnerSystem
 {
-    public class SpawnMaster : MonoBehaviour   //,IConvertGameObjectToEntity
+    public class SpawnMaster : MonoBehaviour
     {
         public List<Wave> EnemyWaves;
         public int CurLevel;
-
-        //public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
-        //{
-        //    DynamicBuffer<WaveBufferComponent> Waves = dstManager.AddBuffer<WaveBufferComponent>(entity);
-        //    foreach (Wave wave in EnemyWaves)
-        //    {
-        //        Waves.Add(new WaveBufferComponent { _wave = wave });
-        //    }
-        //}
-
-    }
-
-    public class testjobsystem : ComponentSystem
-    {
-        protected override void OnUpdate()
+        bool WaveCreated { get { return EnemyWaves.Count > 0; } }
+        private void Start()
         {
-            Entities.ForEach((Entity entity, ref SpawnPointComponent SPC, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
+            if (!WaveCreated)
             {
-                DynamicBuffer<EnemySpawnData> Buffer = EntityManager.GetBuffer<EnemySpawnData>(entity);
-                if (SPC.Temporoary)
-                    return;
-               // EnemyDatabase.LoadDatabaseForce
-              
-                 Object.Instantiate(EnemyDatabase.GetEnemy(Buffer[0].SpawnID).GO,transform.Position, transform.Rotation);
-                SPC.Temporoary = true;
-            });
+                Debug.Log("Waves have not been created", this);
+                return;
+            }
+            foreach (Wave wave in EnemyWaves)
+            {
+                var settings = GameObjectConversionSettings.FromWorld(World.DefaultGameObjectInjectionWorld, null);
+                var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+                Entity entity = entityManager.CreateEntity();
+                var setup = new WaveComponent()
+                {
+                    Level = EnemyWaves.IndexOf(wave),
+                    RewardEXP = wave.RewardEXP,
+                    RewardGold = wave.RewardGold,
+                    RewardSpawnID = wave.RewardSpawnID
+                };
+                entityManager.AddComponentData(entity, setup);
+
+                DynamicBuffer<WaveBufferComponent> buffer = entityManager.AddBuffer<WaveBufferComponent>(entity);
+                foreach (EnemyWaveSpec Enemy in wave.EnemiesForWave)
+                {
+                    buffer.Add(new WaveBufferComponent() { EnemySpecForWave = Enemy });
+                }
+
+            }
+
         }
+
+
     }
+
 }

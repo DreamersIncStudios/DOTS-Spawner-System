@@ -20,9 +20,11 @@ namespace SpawnerSystem
     [System.Serializable]
     public struct EnemySpawnData:IBufferElementData {
         public int SpawnID;
-
+        public bool Spawn;
+        public int SpawnCount;
 
         public static implicit operator int(EnemySpawnData e) { return e; }
+
         public static implicit operator EnemySpawnData(int e) { return new EnemySpawnData { SpawnID = e }; }
     }
 }
