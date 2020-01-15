@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SpawnerSystem.ProofofConcept
+namespace SpawnerSystem.ScriptableObjects
 {
     public interface ISpawnable {
         int SpawnID { get; set; }

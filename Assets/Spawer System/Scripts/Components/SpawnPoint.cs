@@ -7,7 +7,8 @@ namespace SpawnerSystem
 {
  public struct SpawnPointComponent : IComponentData {
         public bool Temporoary;
-        
+        public uint SpawnPointID;
+
 
     }
     public struct PlayerSpawnTag : IComponentData{ }

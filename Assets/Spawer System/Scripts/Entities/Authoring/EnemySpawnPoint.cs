@@ -5,15 +5,13 @@ using Unity.Entities;
 
 namespace SpawnerSystem
 {
-    public class EnemySpawnPoint : MonoBehaviour,IConvertGameObjectToEntity
+    public class EnemySpawnPoint : Spawner,IConvertGameObjectToEntity
     {
         public int MaxEnemyLevel;
 
-        public List<int> SpawnIDList;
-
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
-            var Spawnpoint = new SpawnPointComponent();
+            var Spawnpoint = new SpawnPointComponent() { SpawnPointID= SpawnPointID};
             dstManager.AddComponentData(entity, Spawnpoint);
             var EnemySpawn = new EnemySpawnTag() { MaxLevel = MaxEnemyLevel };
             dstManager.AddComponentData(entity, EnemySpawn);
