@@ -13,7 +13,7 @@ namespace SpawnerSystem
         public int CurLevel;
         bool WaveCreated { get { return EnemyWaves.Count > 0; } }
         private void Start()
-        {
+        { 
             if (!WaveCreated)
             {
                 Debug.Log("Waves have not been created", this);
@@ -29,7 +29,9 @@ namespace SpawnerSystem
                     Level = EnemyWaves.IndexOf(wave),
                     RewardEXP = wave.RewardEXP,
                     RewardGold = wave.RewardGold,
-                    RewardSpawnID = wave.RewardSpawnID
+                    RewardSpawnID = wave.RewardSpawnID,
+                    MaxEnemyAtOnce = wave.MaxEnemyAtOnce
+                    
                 };
                 entityManager.AddComponentData(entity, setup);
 

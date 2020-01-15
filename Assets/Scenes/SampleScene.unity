@@ -178,8 +178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPointID: 4
+  Temporoary: 0
+  SpawnIDList: 01000000
   MaxEnemyLevel: 10
-  SpawnIDList: 0100000001000000
 --- !u!1 &314637626
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,8 +239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPointID: 5
+  Temporoary: 0
+  SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
-  SpawnIDList: 0100000001000000
 --- !u!1 &377295257
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,8 +300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPointID: 6
+  Temporoary: 0
+  SpawnIDList: 01000000
   MaxEnemyLevel: 10
-  SpawnIDList: 0100000001000000
 --- !u!1 &631860972
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,8 +361,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPointID: 1
+  Temporoary: 0
+  SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
-  SpawnIDList: 0100000001000000
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,8 +514,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPointID: 7
+  Temporoary: 0
+  SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
-  SpawnIDList: 0100000001000000
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,8 +696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPointID: 2
+  Temporoary: 0
+  SpawnIDList: 01000000
   MaxEnemyLevel: 10
-  SpawnIDList: 0100000001000000
 --- !u!1 &1462224203
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,8 +757,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPointID: 3
+  Temporoary: 0
+  SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
-  SpawnIDList: 0100000001000000
 --- !u!1 &1623549171
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,8 +818,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPointID: 8
+  Temporoary: 0
+  SpawnIDList: 01000000
   MaxEnemyLevel: 10
-  SpawnIDList: 0100000001000000
 --- !u!1 &1705337953
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,9 +933,10 @@ MonoBehaviour:
     - spawnID: 1
       SpawnCount: 10
       level: 2
-    - spawnID: 1
-      SpawnCount: 30
+    - spawnID: 3
+      SpawnCount: 6
       level: 2
+    MaxEnemyAtOnce: 0
     RewardGold: 10
     RewardEXP: 10
     RewardSpawnID: 10
@@ -940,6 +957,7 @@ MonoBehaviour:
     - spawnID: 0
       SpawnCount: 0
       level: 0
+    MaxEnemyAtOnce: 0
     RewardGold: 10
     RewardEXP: 10
     RewardSpawnID: 10
@@ -957,4 +975,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2114242884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114242886}
+  - component: {fileID: 2114242885}
+  m_Layer: 0
+  m_Name: Spawn Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2114242885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114242884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24ded86dca81a34592e98b52801fdcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CountinScene: 0
+  MaxCountInScene: 60
+  ControlMode: 1
+--- !u!4 &2114242886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114242884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.78200006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

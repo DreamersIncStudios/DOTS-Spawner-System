@@ -1,4 +1,4 @@
-﻿namespace SpawnerSystem.ProofofConcept
+﻿namespace SpawnerSystem.ScriptableObjects
 {
     public interface ICharacterData
     {

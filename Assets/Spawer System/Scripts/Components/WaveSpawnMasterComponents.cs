@@ -12,6 +12,7 @@ namespace SpawnerSystem
     {
         public int WaveNumber;
         public List<EnemyWaveSpec> EnemiesForWave;
+        public uint MaxEnemyAtOnce;
         public int RewardGold;
         public int RewardEXP;
         public int RewardSpawnID;
@@ -25,6 +26,7 @@ namespace SpawnerSystem
     }
     public struct WaveBufferComponent : IBufferElementData {
         public EnemyWaveSpec EnemySpecForWave;
+        public int dispatchedCount;
 
         public static implicit operator EnemyWaveSpec(WaveBufferComponent w) { return w.EnemySpecForWave; }
         public static implicit operator WaveBufferComponent(EnemyWaveSpec e) { return new WaveBufferComponent() { EnemySpecForWave = e }; }
@@ -32,10 +34,12 @@ namespace SpawnerSystem
     }
     public struct WaveComponent : IComponentData {
         public int Level;
+        public uint MaxEnemyAtOnce;
         public int RewardGold;
         public int RewardEXP;
         public int RewardSpawnID;
-        public int MaxCountAtOnce;
-        public bool testOnce;
+        public bool AllEnemiesDispatched;
+        public int EnemiesDispatched;
+        public int EnemiesDefeated;
     }
 }
