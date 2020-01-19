@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: cea1c3ff24ad2444c9b1aa4d34e7d1f5, type: 2}
 --- !u!1 &298277779
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPointID: 4
+  SpawnPointID: 8
   Temporoary: 0
   SpawnIDList: 01000000
   MaxEnemyLevel: 10
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPointID: 5
+  SpawnPointID: 8
   Temporoary: 0
   SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPointID: 6
+  SpawnPointID: 8
   Temporoary: 0
   SpawnIDList: 01000000
   MaxEnemyLevel: 10
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPointID: 1
+  SpawnPointID: 8
   Temporoary: 0
   SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPointID: 7
+  SpawnPointID: 8
   Temporoary: 0
   SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
@@ -601,6 +601,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1067187877
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2550597233468257566, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Grunt '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.782
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374405395690767463, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442835480231019418, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: LootTable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442835480231019418, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: LootTable.Array.data[0].spawnID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442835480231019418, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: LootTable.Array.data[0].probabilityWeight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442835480231019418, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: LootTable.Array.data[1].spawnID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442835480231019418, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: LootTable.Array.data[1].probabilityWeight
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}
 --- !u!1 &1322822232
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPointID: 2
+  SpawnPointID: 8
   Temporoary: 0
   SpawnIDList: 01000000
   MaxEnemyLevel: 10
@@ -757,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba9309f97d4f674fb4c980d6ad88d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPointID: 3
+  SpawnPointID: 8
   Temporoary: 0
   SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
@@ -936,7 +1030,7 @@ MonoBehaviour:
     - spawnID: 3
       SpawnCount: 6
       level: 2
-    MaxEnemyAtOnce: 0
+    MaxEnemyAtOnce: 6
     RewardGold: 10
     RewardEXP: 10
     RewardSpawnID: 10
@@ -970,7 +1064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822741310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 10, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

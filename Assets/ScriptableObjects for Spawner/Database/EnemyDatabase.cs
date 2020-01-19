@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SpawnerSystem.ScriptableObjects;
 namespace SpawnerSystem
 {
     
@@ -46,6 +46,52 @@ namespace SpawnerSystem
             return null;
         }
     }
+    static public class ItemDatabase
+    {
+        static public List<Droppable> droppables;
+        static public bool isLoaded { get; private set; } = false;
 
+        static private void ValidateDatebase()
+        {
+            if (droppables== null) 
+                droppables= new List<Droppable>();
+        }
+
+        static public void LoadDatabase() {
+            if (isLoaded)
+                return;
+            LoadDatabaseForce();
+        }
+        static public void LoadDatabaseForce()
+        {
+            ValidateDatebase();
+            isLoaded = true;
+            RecoveryItemSO[] resources = Resources.LoadAll<RecoveryItemSO>(@"Item");
+            foreach (RecoveryItemSO item  in resources)
+            {
+                if (!droppables.Contains((Droppable)item))
+                    droppables.Add(item);
+            }
+        }
+
+        static public void ClearDatabase()
+        {
+            isLoaded = false;
+            droppables.Clear();
+        }
+
+        static public Droppable GetItem(int SpawnID)
+        {
+            ValidateDatebase();
+            LoadDatabase();
+            foreach (Droppable drop in droppables)
+            {
+                if (drop.SpawnID == SpawnID)
+                    return ScriptableObject.Instantiate(drop) as Droppable;
+            }
+            return null;
+        }
+
+    }
 
 }

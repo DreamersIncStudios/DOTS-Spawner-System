@@ -66,12 +66,24 @@
     <Compile Include="Assets\ScriptableObjects for Spawner\Enemy.cs" />
     <Compile Include="Assets\ScriptableObjects for Spawner\Interface\IObject.cs" />
     <Compile Include="Assets\ScriptableObjects for Spawner\Interface\iCharacterData.cs" />
+    <Compile Include="Assets\ScriptableObjects for Spawner\Interface\iDroppable.cs" />
+    <Compile Include="Assets\ScriptableObjects for Spawner\Interface\iRecoverable.cs" />
+    <Compile Include="Assets\ScriptableObjects for Spawner\LootTable.cs" />
+    <Compile Include="Assets\ScriptableObjects for Spawner\RecoveryItemSO.cs" />
     <Compile Include="Assets\ScriptableObjects for Spawner\SpawnableSO.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Components\EnemyTag.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Components\SpawnController.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Components\Spawner.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\WaveSpawnMasterComponents.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\Entities\EnemySpawnPoint.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Entities\Authoring\EnemyGOC.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Entities\Authoring\EnemySpawnPoint.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Entities\SpawnMaster.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Scripts to be replace with fully Develop system\CharacterStats.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Scripts to be replace with fully Develop system\PickupRecoverItem.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\System\SpawnSystem.cs" />
     <Compile Include="Assets\Spawer System\Scripts\System\WaveMasterSystem.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Test Prefabs\Utility Scripts\CleanUpHybridEntity.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -364,10 +376,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.8f1/Unity/Editor/2019.3.0f3/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.burst@1.2.0-preview.11/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.burst@1.2.0/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.collections@0.4.0-preview.6/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.collections@0.5.0-preview.9/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.8f1/Unity/Editor/2019.3.0f3/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

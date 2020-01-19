@@ -40,7 +40,7 @@ namespace SpawnerSystem
                 {
                     buffer.Add(new WaveBufferComponent() { EnemySpecForWave = Enemy });
                 }
-
+             
             }
 
         }
