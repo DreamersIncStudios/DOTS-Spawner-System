@@ -42,6 +42,8 @@ namespace SpawnerSystem
         {
             EntityManager mgr = World.DefaultGameObjectInjectionWorld.EntityManager;
             mgr.AddComponentData(reference, new SelectADropTag() { NumOfDrops=numOfDropitems});
+            World.DefaultGameObjectInjectionWorld.GetOrCreateSystem<DropSystem>().Update();
+
             spawnItemDropSpawnPoint(mgr);   
             
             mgr.AddComponentData(reference, new Destroytag() { delay = 0.0f });

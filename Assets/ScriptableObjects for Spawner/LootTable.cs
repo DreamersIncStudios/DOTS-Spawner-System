@@ -31,7 +31,7 @@ namespace SpawnerSystem
     public struct ProbTotal : IComponentData {
         public float probabilityTotalWeight;
     }
-
+    [UpdateBefore(typeof(Utilities.ECS.CleanUpHybridEntity))]
     public class DropSystem : ComponentSystem
     {
         protected override void OnUpdate()
@@ -39,7 +39,7 @@ namespace SpawnerSystem
             Entities.ForEach((Entity entity, EnemyGOC GO, ref SelectADropTag DropInfo, ref ProbTotal prob) => 
             {
                 DynamicBuffer<ItemSpawnData> Buffer = EntityManager.GetBuffer<ItemSpawnData>(entity);
-
+                GO.Dropped = new List<ItemSpawnData>();
                 for (int cnt = 0; cnt < DropInfo.NumOfDrops; cnt++)
                 {
                     float pickedNumber = Random.Range(0, prob.probabilityTotalWeight);

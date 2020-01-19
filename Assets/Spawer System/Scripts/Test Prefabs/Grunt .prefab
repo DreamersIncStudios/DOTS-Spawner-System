@@ -109,19 +109,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyGO: 0
   LootTable:
-  - spawnID: 2
+  - SpawnID: 2
+    Spawn: 0
+    SpawnCount: 0
     probabilityWeight: 20
     probabilityPercent: 0
     probabilityRangeFrom: 0
     probabilityRangeTo: 0
-  - spawnID: 3
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
     probabilityWeight: 30
     probabilityPercent: 0
     probabilityRangeFrom: 0
     probabilityRangeTo: 0
-  DropSpawnID:
-  - SpawnID: 2
-    SpawnCount: 10
+  numOfDropitems: 1
 --- !u!114 &-4593606634555942124
 MonoBehaviour:
   m_ObjectHideFlags: 0
