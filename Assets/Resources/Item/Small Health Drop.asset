@@ -15,5 +15,5 @@ MonoBehaviour:
   _spawnID: 2
   Type: 0
   recoveryAmount: 75
-  _GO: {fileID: 3180684497168143851, guid: 16eae31abd99d4b4dad84147cc5c5509, type: 3}
+  _GO: {fileID: 4624113108538257097, guid: 96d8bec8472413d4b93346df0024aa85, type: 3}
   _scale: {x: 1, y: 1, z: 1}
