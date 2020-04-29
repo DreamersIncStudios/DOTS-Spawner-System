@@ -75,6 +75,10 @@
     <Compile Include="Assets\Spawer System\Scripts\Components\EnemyTag.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnController.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint\EnemySpawnData.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint\ItemSpawnData.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint\SpawnPointComponent.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint\SpawnTags\EnemySpawnTag.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\Spawner.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\WaveSpawnMasterComponents.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Entities\Authoring\EnemyGOC.cs" />

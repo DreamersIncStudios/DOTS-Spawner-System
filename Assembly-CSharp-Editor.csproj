@@ -101,6 +101,12 @@
     <Reference Include="Unity.Collections">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Properties.UI">
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Properties.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Serialization.Editor">
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Serialization.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Properties">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
     </Reference>
@@ -134,6 +140,9 @@
     <Reference Include="Unity.Entities.BuildUtils">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Serialization">
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Serialization.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
@@ -145,6 +154,12 @@
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Deformations">
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Deformations.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Properties.UI.Editor">
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Properties.UI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
@@ -169,21 +184,6 @@
     </Reference>
     <Reference Include="Unity.Transforms.Hybrid">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Build.Internals">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Build.Internals.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Build.Common">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Build.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Entities.Properties">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Entities.StaticTypeRegistry">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.StaticTypeRegistry.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Build">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Build.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.8f1/Unity/Editor/2019.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -378,10 +378,13 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.burst@1.2.0-preview.11/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.burst@1.3.0-preview.10/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.collections@0.4.0-preview.6/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.collections@0.7.1-preview.3/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

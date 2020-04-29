@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 298277780}
   - component: {fileID: 298277782}
   - component: {fileID: 298277781}
+  - component: {fileID: 298277784}
+  - component: {fileID: 298277783}
   m_Layer: 0
   m_Name: Enemy Spawn Point (3)
   m_TagString: Untagged
@@ -182,6 +184,38 @@ MonoBehaviour:
   Temporoary: 0
   SpawnIDList: 01000000
   MaxEnemyLevel: 10
+--- !u!114 &298277783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298277779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536365569dc02814a9c7ba20b3d0d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - SpawnID: 1
+    Spawn: 0
+    SpawnCount: 0
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
+--- !u!114 &298277784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298277779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e0bf023c6f4e408be57068e9ed871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevel: 10
 --- !u!1 &314637626
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +227,8 @@ GameObject:
   - component: {fileID: 314637627}
   - component: {fileID: 314637629}
   - component: {fileID: 314637628}
+  - component: {fileID: 314637631}
+  - component: {fileID: 314637630}
   m_Layer: 0
   m_Name: Enemy Spawn Point (4)
   m_TagString: Untagged
@@ -243,6 +279,38 @@ MonoBehaviour:
   Temporoary: 0
   SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
+--- !u!114 &314637630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314637626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536365569dc02814a9c7ba20b3d0d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - SpawnID: 1
+    Spawn: 0
+    SpawnCount: 0
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
+--- !u!114 &314637631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314637626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e0bf023c6f4e408be57068e9ed871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevel: 10
 --- !u!1 &377295257
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +322,8 @@ GameObject:
   - component: {fileID: 377295258}
   - component: {fileID: 377295260}
   - component: {fileID: 377295259}
+  - component: {fileID: 377295262}
+  - component: {fileID: 377295261}
   m_Layer: 0
   m_Name: Enemy Spawn Point (5)
   m_TagString: Untagged
@@ -304,6 +374,38 @@ MonoBehaviour:
   Temporoary: 0
   SpawnIDList: 01000000
   MaxEnemyLevel: 10
+--- !u!114 &377295261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377295257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536365569dc02814a9c7ba20b3d0d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - SpawnID: 1
+    Spawn: 0
+    SpawnCount: 0
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
+--- !u!114 &377295262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377295257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e0bf023c6f4e408be57068e9ed871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevel: 10
 --- !u!1 &631860972
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +417,8 @@ GameObject:
   - component: {fileID: 631860973}
   - component: {fileID: 631860975}
   - component: {fileID: 631860974}
+  - component: {fileID: 631860977}
+  - component: {fileID: 631860976}
   m_Layer: 0
   m_Name: 'Enemy Spawn Point '
   m_TagString: Untagged
@@ -365,6 +469,38 @@ MonoBehaviour:
   Temporoary: 0
   SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
+--- !u!114 &631860976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631860972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536365569dc02814a9c7ba20b3d0d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - SpawnID: 1
+    Spawn: 0
+    SpawnCount: 0
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
+--- !u!114 &631860977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631860972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e0bf023c6f4e408be57068e9ed871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevel: 10
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +604,8 @@ GameObject:
   - component: {fileID: 851190693}
   - component: {fileID: 851190695}
   - component: {fileID: 851190694}
+  - component: {fileID: 851190697}
+  - component: {fileID: 851190696}
   m_Layer: 0
   m_Name: Enemy Spawn Point (6)
   m_TagString: Untagged
@@ -518,6 +656,38 @@ MonoBehaviour:
   Temporoary: 0
   SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
+--- !u!114 &851190696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851190692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536365569dc02814a9c7ba20b3d0d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - SpawnID: 1
+    Spawn: 0
+    SpawnCount: 0
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
+--- !u!114 &851190697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851190692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e0bf023c6f4e408be57068e9ed871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevel: 10
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +820,8 @@ GameObject:
   - component: {fileID: 1342345102}
   - component: {fileID: 1342345104}
   - component: {fileID: 1342345103}
+  - component: {fileID: 1342345106}
+  - component: {fileID: 1342345105}
   m_Layer: 0
   m_Name: Enemy Spawn Point (1)
   m_TagString: Untagged
@@ -700,6 +872,38 @@ MonoBehaviour:
   Temporoary: 0
   SpawnIDList: 01000000
   MaxEnemyLevel: 10
+--- !u!114 &1342345105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342345101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536365569dc02814a9c7ba20b3d0d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - SpawnID: 1
+    Spawn: 0
+    SpawnCount: 0
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
+--- !u!114 &1342345106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342345101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e0bf023c6f4e408be57068e9ed871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevel: 10
 --- !u!1 &1462224203
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +915,8 @@ GameObject:
   - component: {fileID: 1462224204}
   - component: {fileID: 1462224206}
   - component: {fileID: 1462224205}
+  - component: {fileID: 1462224208}
+  - component: {fileID: 1462224207}
   m_Layer: 0
   m_Name: Enemy Spawn Point (2)
   m_TagString: Untagged
@@ -761,6 +967,38 @@ MonoBehaviour:
   Temporoary: 0
   SpawnIDList: 0100000003000000
   MaxEnemyLevel: 10
+--- !u!114 &1462224207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462224203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536365569dc02814a9c7ba20b3d0d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - SpawnID: 1
+    Spawn: 0
+    SpawnCount: 0
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
+--- !u!114 &1462224208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462224203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e0bf023c6f4e408be57068e9ed871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevel: 10
 --- !u!1 &1623549171
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +1010,8 @@ GameObject:
   - component: {fileID: 1623549172}
   - component: {fileID: 1623549174}
   - component: {fileID: 1623549173}
+  - component: {fileID: 1623549176}
+  - component: {fileID: 1623549175}
   m_Layer: 0
   m_Name: Enemy Spawn Point (7)
   m_TagString: Untagged
@@ -822,6 +1062,38 @@ MonoBehaviour:
   Temporoary: 0
   SpawnIDList: 01000000
   MaxEnemyLevel: 10
+--- !u!114 &1623549175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623549171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536365569dc02814a9c7ba20b3d0d91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - SpawnID: 1
+    Spawn: 0
+    SpawnCount: 0
+  - SpawnID: 3
+    Spawn: 0
+    SpawnCount: 0
+--- !u!114 &1623549176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623549171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e0bf023c6f4e408be57068e9ed871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevel: 10
 --- !u!1 &1705337953
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +1186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1822741311
 MonoBehaviour:
   m_ObjectHideFlags: 0

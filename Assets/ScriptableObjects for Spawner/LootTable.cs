@@ -48,7 +48,7 @@ namespace SpawnerSystem
                     foreach (ItemSpawnData Drop in Buffer)
                     {
                         // If the picked number matches the item's range, return item
-                        if (pickedNumber > Drop.probabilityRangeFrom && pickedNumber < Drop.probabilityRangeTo)
+                        if (pickedNumber > Drop.spawnData.probabilityRangeFrom && pickedNumber < Drop.spawnData.probabilityRangeTo)
                         {
                             GO.Dropped.Add(Drop);
                             return;
@@ -84,16 +84,16 @@ namespace SpawnerSystem
                 for (int cnt = 0; cnt < DropItems.Length; cnt++)
                 {
                     ItemSpawnData Drop = DropItems[cnt];
-                    if (Drop.probabilityWeight <= 0)
+                    if (Drop.spawnData.probabilityWeight <= 0)
                     {
                         Debug.LogWarning("Loot Drop Item Not set up");
-                        Drop.probabilityWeight = 0f;
+                        Drop.spawnData.probabilityWeight = 0f;
                     }
                     else
                     {
-                        Drop.probabilityRangeFrom = currentProbabilityWeightMaximum;
-                        currentProbabilityWeightMaximum += Drop.probabilityWeight;
-                        Drop.probabilityRangeTo = currentProbabilityWeightMaximum;
+                        Drop.spawnData.probabilityRangeFrom = currentProbabilityWeightMaximum;
+                        currentProbabilityWeightMaximum += Drop.spawnData.probabilityWeight;
+                        Drop.spawnData.probabilityRangeTo = currentProbabilityWeightMaximum;
                     }
                     prob.probabilityTotalWeight = currentProbabilityWeightMaximum;
 
@@ -104,7 +104,7 @@ namespace SpawnerSystem
                 for (int cnt = 0; cnt < DropItems.Length; cnt++)
                 {
                     ItemSpawnData    Drop = DropItems[cnt];
-                    Drop.probabilityPercent = ((Drop.probabilityWeight) / prob.probabilityTotalWeight) * 100;
+                    Drop.spawnData.probabilityPercent = ((Drop.spawnData.probabilityWeight) / prob.probabilityTotalWeight) * 100;
                     DropItems[cnt] = Drop;
                 }
                 CommandBuffer.RemoveComponent<CreateLootTableTag>(index, entity);
