@@ -52,12 +52,12 @@ namespace SpawnerSystem
                 {
                     if (!SpawnControl.CanSpawn)
                         return;
-                    if (Buffer[cnt].Spawn) {
-                        Object.Instantiate(EnemyDatabase.GetEnemy(Buffer[cnt].SpawnID).GO, transform.Position, transform.Rotation);
+                    if (Buffer[cnt].spawnData.Spawn) {
+                        Object.Instantiate(EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID).GO, transform.Position, transform.Rotation);
                         EnemySpawnData tempData = Buffer[cnt];
-                        tempData.SpawnCount--;
-                        if (tempData.SpawnCount == 0)
-                            tempData.Spawn = false;
+                        tempData.spawnData.SpawnCount--;
+                        if (tempData.spawnData.SpawnCount == 0)
+                            tempData.spawnData.Spawn = false;
                         Buffer[cnt] = tempData;
                         SpawnControl.CountinScene++;
       
@@ -95,7 +95,7 @@ namespace SpawnerSystem
             Vector3 point;
                 if (RandomPoint(Pos.Position, Item.spawnrange, out point))
                 {
-                    ItemDatabase.GetItem(Buffer[0].SpawnID).Spawn(point);
+                    ItemDatabase.GetItem(Buffer[0].spawnData.SpawnID).Spawn(point);
 
                     EntityManager.DestroyEntity(entity);
                 }

@@ -105,11 +105,11 @@ namespace SpawnerSystem {
             {
                 if (count[0] >= SpawnCount)
                     return;
-                if (EnemyBuffer[cnt].SpawnID == SpawnID)
+                if (EnemyBuffer[cnt].spawnData.SpawnID == SpawnID)
                 {
                     EnemySpawnData temp = EnemyBuffer[cnt];
-                    temp.SpawnCount++;
-                    temp.Spawn = true;
+                    temp.spawnData.SpawnCount++;
+                    temp.spawnData.Spawn = true;
                     EnemyBuffer[cnt] = temp;
                     count[0]++;
 
