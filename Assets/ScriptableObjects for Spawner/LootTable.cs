@@ -106,6 +106,7 @@ namespace SpawnerSystem
                     ItemSpawnData    Drop = DropItems[cnt];
                     Drop.spawnData.probabilityPercent = ((Drop.spawnData.probabilityWeight) / prob.probabilityTotalWeight) * 100;
                     DropItems[cnt] = Drop;
+
                 }
                 CommandBuffer.RemoveComponent<CreateLootTableTag>(index, entity);
                 
