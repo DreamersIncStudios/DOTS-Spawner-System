@@ -4,6 +4,8 @@ using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Jobs;
+using UnityEngine.AI;
+
 
 namespace SpawnerSystem
 {
@@ -22,19 +24,22 @@ namespace SpawnerSystem
             if(SpawnControl==null)
             SpawnControl = SpawnController.Instance;
 
+            SpawnDropsItem();
+
             if (!SpawnControl.CanSpawn)
                 return;
-
-            switch (SpawnControl.ControlMode)
+            else
             {
-                case SpawnControlMode.Game:
-                    SpawnGame();
-                    break;
-                case SpawnControlMode.WaveGen:
-                    SpawnWave();
-                    break;
+                switch (SpawnControl.ControlMode)
+                {
+                    case SpawnControlMode.Game:
+                        SpawnGame();
+                        break;
+                    case SpawnControlMode.WaveGen:
+                        SpawnWave();
+                        break;
+                }
             }
-      
         }
 
         private void SpawnWave()
@@ -65,6 +70,40 @@ namespace SpawnerSystem
         {
             //TBD
         }
+
+        bool RandomPoint(Vector3 center, float range, out Vector3 result)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                Vector3 randomPoint = center + Random.insideUnitSphere * range;
+                NavMeshHit hit;
+                if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+                {
+                    result = hit.position;
+                    return true;
+                }
+            }
+            result = Vector3.zero;
+            return false;
+        }
+
+        public void SpawnDropsItem() {
+            Entities.ForEach((Entity entity, ref SpawnPointComponent SPC, ref ItemSpawnTag Item, ref LocalToWorld Pos) => 
+            {
+                DynamicBuffer<ItemSpawnData> Buffer = EntityManager.GetBuffer<ItemSpawnData>(entity);
+            // Loot Table job 
+            Vector3 point;
+                if (RandomPoint(Pos.Position, Item.spawnrange, out point))
+                {
+                    ItemDatabase.GetItem(Buffer[0].SpawnID).Spawn(point);
+
+                    EntityManager.DestroyEntity(entity);
+                }
+            });
+
+
+        }
     }
+
 
 }
