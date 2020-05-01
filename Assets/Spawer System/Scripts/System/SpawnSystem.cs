@@ -6,7 +6,6 @@ using Unity.Transforms;
 using Unity.Jobs;
 using UnityEngine.AI;
 
-
 namespace SpawnerSystem
 {
     [UpdateAfter(typeof(WaveMasterSystem))]

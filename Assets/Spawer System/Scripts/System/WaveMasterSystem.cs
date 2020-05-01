@@ -10,7 +10,7 @@ namespace SpawnerSystem {
 
     public class WaveMasterSystem : ComponentSystem
     {
-        /*  Find all the spawn points that can spawn this enemy
+        /*  Rewrite with spawn tag
 
                      */
         public int wavecnt = 0;
@@ -19,6 +19,8 @@ namespace SpawnerSystem {
         {
             base.OnCreate();
             mgr = World.DefaultGameObjectInjectionWorld.EntityManager;
+            m_Group = GetEntityQuery( typeof(EnemySpawnTag));
+
         }
 
         bool CurWave(WaveComponent wave)
@@ -36,8 +38,10 @@ namespace SpawnerSystem {
                 return false;
         }
         SpawnController Control;
+        EntityQuery m_Group;
         protected override void OnUpdate()
         {
+          
             Entities.ForEach((Entity entity, ref WaveComponent wave) =>
             {
                 if (!CurWave(wave))
@@ -56,15 +60,18 @@ namespace SpawnerSystem {
                         while (count != 0)
                         {
                             NativeArray<int> dispatched = new NativeArray<int>(1, Allocator.TempJob);
+
+                      
                             var testing = new DispatchSpawnsToSpawnPointsEnemy()
                             {
                                 SpawnCount = count,
                                 SpawnID = waveEnemy.EnemySpecForWave.spawnID,
                                 count = dispatched,
- 
+                                chunkEnemyBuffer = GetArchetypeChunkBufferType<EnemySpawnData>(),
+                                C1= GetArchetypeChunkComponentType<EnemySpawnTag>()
                             };
 
-                            JobHandle handle = testing.Schedule(this);
+                            JobHandle handle= testing.Schedule(m_Group);
                             handle.Complete();
 
                             count -= testing.count[0];
@@ -88,33 +95,40 @@ namespace SpawnerSystem {
         }
 
 
- 
-
-
     }
 
-
-    public struct DispatchSpawnsToSpawnPointsEnemy : IJobForEach_BC<EnemySpawnData, EnemySpawnTag>
+    [Unity.Burst.BurstCompile]
+    public struct DispatchSpawnsToSpawnPointsEnemy : IJobChunk
     {
         public int SpawnID;
         public int SpawnCount;
         public NativeArray<int> count;
-        public void Execute(DynamicBuffer<EnemySpawnData> EnemyBuffer, ref EnemySpawnTag c1)
+        public ArchetypeChunkBufferType<EnemySpawnData> chunkEnemyBuffer;
+        public ArchetypeChunkComponentType<EnemySpawnTag> C1;
+        public void Execute(ArchetypeChunk chunk, int chunkIndex, int firstEntityIndex)
         {
-            for (int cnt = 0; cnt < EnemyBuffer.Length; cnt++)
-            {
-                if (count[0] >= SpawnCount)
-                    return;
-                if (EnemyBuffer[cnt].spawnData.SpawnID == SpawnID)
-                {
-                    EnemySpawnData temp = EnemyBuffer[cnt];
-                    temp.spawnData.SpawnCount++;
-                    temp.spawnData.Spawn = true;
-                    EnemyBuffer[cnt] = temp;
-                    count[0]++;
+            var EnemyBuffer2 = chunk.GetBufferAccessor(chunkEnemyBuffer);
 
+            for (int cnt = 0; cnt < EnemyBuffer2.Length; cnt++)
+            {
+                DynamicBuffer<EnemySpawnData> EnemyBuffer = EnemyBuffer2[cnt];
+                for (int i = 0; i < EnemyBuffer.Length; i++)
+                {
+                    if (count[0] >= SpawnCount)
+                        return;
+                    if (EnemyBuffer[i].spawnData.SpawnID == SpawnID)
+                    {
+                        EnemySpawnData temp = EnemyBuffer[i];
+                        temp.spawnData.SpawnCount++;
+                        temp.spawnData.Spawn = true;
+                        EnemyBuffer[i] = temp;
+                        count[0]++;
+
+                    }
                 }
             }
         }
+
+      
     }
 }
