@@ -16,11 +16,9 @@ namespace SpawnerSystem.ScriptableObjects
         float probabilityRangeFrom { get; set; }
         float probabilityRangeTo { get; set; }
     }
-    public abstract class Droppable : ScriptableObject, iDroppable,ISpawnable
+    public abstract class Droppable : SpawnableSO,  iDroppable
     {
-        [SerializeField] int _spawnID;
 
-        public int SpawnID { get { return _spawnID; } set { _spawnID = value; } }
 
         // To Be Added Later
         // removing 

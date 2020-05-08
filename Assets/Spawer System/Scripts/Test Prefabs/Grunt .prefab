@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4703479493307141637}
   - component: {fileID: 6442835480231019418}
   - component: {fileID: -4593606634555942124}
+  - component: {fileID: -858474538682807625}
   m_Layer: 0
   m_Name: 'Grunt '
   m_TagString: Untagged
@@ -139,3 +140,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversionMode: 1
+--- !u!114 &-858474538682807625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550597233468257566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591d599cb75d2034b988531098b224c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -69,8 +69,10 @@ namespace SpawnerSystem
                 Buffer.Add(loot);
             }
             MGR.AddComponentData(entity, new ItemSpawnTag());
-            MGR.AddComponentData(entity, new LocalToWorld() );
-            MGR.AddComponentData(entity, new Translation() { Value=this.transform.position});
+            var position = transform.TransformPoint(this.transform.position);
+            MGR.AddComponentData(entity, new Translation() { Value = position });
+            MGR.AddComponentData(entity, new LocalToWorld() { Value = transform.localToWorldMatrix});
+
             MGR.SetName(entity,"Loot Spawn Point");
 
         }
