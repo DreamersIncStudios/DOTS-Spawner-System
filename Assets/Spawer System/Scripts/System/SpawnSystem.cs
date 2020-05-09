@@ -26,7 +26,7 @@ namespace SpawnerSystem
             if(SpawnControl==null)
             SpawnControl = SpawnController.Instance;
 
-            SpawnDropsItem();
+           // SpawnDropsItem(); Remove line 
 
             if (!SpawnControl.CanSpawn)
                 return;
@@ -136,24 +136,6 @@ namespace SpawnerSystem
             return false;
         }
 
-        public void SpawnDropsItem() {
-            Entities.ForEach((Entity entity, ref SpawnPointComponent SPC, ref ItemSpawnTag Item, ref LocalToWorld Pos) => 
-            {
-                DynamicBuffer<ItemSpawnData> Buffer = EntityManager.GetBuffer<ItemSpawnData>(entity);
-            // Loot Table job 
-            Vector3 point;
-                if (RandomPoint(Pos.Position, Item.spawnrange, out point))
-                {
-                    ItemDatabase.GetItem(Buffer[0].spawnData.SpawnID).Spawn(point);
-                    Debug.Log("Should Delete");
-                    PostUpdateCommands.DestroyEntity(entity);
-                }
-
-
-            });
-
-
-        }
        
 
     }

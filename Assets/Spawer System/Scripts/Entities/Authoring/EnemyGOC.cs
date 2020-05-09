@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
-using Unity.Jobs;
+using SpawnerSystem.Loot;
 using Utilities.ECS;
-using SpawnerSystem.ScriptableObjects;
+
 
 namespace SpawnerSystem
 {
@@ -25,12 +25,7 @@ namespace SpawnerSystem
         {
             var c1 = new EnemyTag() { Destory = false };
             dstManager.AddComponentData(entity, c1);
-            DynamicBuffer<ItemSpawnData> Buffer = dstManager.AddBuffer<ItemSpawnData>(entity);
-            foreach (ItemSpawnData drop in LootTable)
-                Buffer.Add(drop);
-            dstManager.AddComponentData(entity, new CreateLootTableTag());
-            dstManager.AddComponentData(entity, new ProbTotal() { probabilityTotalWeight = 0.0f });
-            reference = entity;
+                       reference = entity;
         }
 
         public void Update()
@@ -41,9 +36,6 @@ namespace SpawnerSystem
         void DestroyEnemy()
         {
             EntityManager mgr = World.DefaultGameObjectInjectionWorld.EntityManager;
-            mgr.AddComponentData(reference, new SelectADropTag() { NumOfDrops=numOfDropitems});
-            World.DefaultGameObjectInjectionWorld.GetOrCreateSystem<DropSystem>().Update();
-
             spawnItemDropSpawnPoint(mgr);   
             
             mgr.AddComponentData(reference, new Destroytag() { delay = 0.0f });
@@ -61,17 +53,22 @@ namespace SpawnerSystem
                 Temporoary = true,
                 SpawnPointID = 10000
             });
+            MGR.AddComponentData(entity, new SelectADropTag() { NumOfDrops = numOfDropitems });
+
             DynamicBuffer<ItemSpawnData> Buffer = MGR.AddBuffer<ItemSpawnData>(entity);
 
             // Change to a custom input.
-            foreach (ItemSpawnData loot in Dropped)
+
+            foreach (ItemSpawnData loot in LootTable)
             {
                 Buffer.Add(loot);
             }
             MGR.AddComponentData(entity, new ItemSpawnTag());
+            MGR.AddComponent<CreateLootTableTag>(entity);
             var position = transform.TransformPoint(this.transform.position);
             MGR.AddComponentData(entity, new Translation() { Value = position });
             MGR.AddComponentData(entity, new LocalToWorld() { Value = transform.localToWorldMatrix});
+            MGR.AddComponentData(entity, new ProbTotal() { probabilityTotalWeight = 0.0f });
 
             MGR.SetName(entity,"Loot Spawn Point");
 
@@ -79,15 +76,6 @@ namespace SpawnerSystem
 
     }
 
-    
-    //public class test : ComponentSystem
-    //{
-    //    protected override void OnUpdate()
-    //    {
-    //        throw new System.NotImplementedException();
-    //    }
 
-
-    //}
 
 }
