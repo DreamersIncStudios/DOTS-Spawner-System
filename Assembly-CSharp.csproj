@@ -86,7 +86,7 @@
     <Compile Include="Assets\Spawer System\Scripts\Entities\SpawnMaster.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Scripts to be replace with fully Develop system\CharacterStats.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Scripts to be replace with fully Develop system\PickupRecoverItem.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\System\LootTable.cs" />
+    <Compile Include="Assets\Spawer System\Scripts\System\Loot System\LootTable.cs" />
     <Compile Include="Assets\Spawer System\Scripts\System\SpawnSystem.cs" />
     <Compile Include="Assets\Spawer System\Scripts\System\WaveMasterSystem.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Test Prefabs\Utility Scripts\CleanUpHybridEntity.cs" />
