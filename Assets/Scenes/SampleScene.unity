@@ -34,7 +34,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 2048
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
@@ -57,7 +57,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
-    m_BakeResolution: 40
+    m_BakeResolution: 15
     m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
@@ -65,7 +65,8 @@ LightmapSettings:
     m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
+    m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000,
+      type: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_FinalGather: 0
@@ -73,7 +74,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -98,7 +99,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: cd6251aff0ab3b14d87e0f6a8e756fcd,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -170,10 +172,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &173436487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,10 +250,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &178804476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,10 +410,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &298277784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,10 +488,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &314637631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,10 +566,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &377295262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,10 +631,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &624632046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,10 +722,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &631860977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,10 +892,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &851190697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,10 +1078,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &977223479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1154,10 +1156,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &1050318083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1232,10 +1234,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &1235060893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,10 +1312,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &1288930805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,10 +1441,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &1342345106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1525,6 +1527,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversionMode: 1
+--- !u!1 &1416394734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416394735}
+  - component: {fileID: 1416394738}
+  - component: {fileID: 1416394737}
+  - component: {fileID: 1416394736}
+  m_Layer: 0
+  m_Name: Grunt Level 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416394735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416394734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1822741312}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1416394736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416394734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b4fa26d6d18b74c839ee88b7f60bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - Level: 1
+    SpawnCount: 48
+    Modlevel: 0
+    dispatchedCount: 0
+  - Level: 2
+    SpawnCount: 96
+    Modlevel: 2
+    dispatchedCount: 0
+--- !u!114 &1416394737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416394734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d037eefaa53b10648828e0a48f14b96f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyId: 1
+  BaseLevel: 1
+  BaseRewardGold: 50
+  BaseRewardEXP: 75
+--- !u!114 &1416394738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416394734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConversionMode: 0
 --- !u!1 &1462224203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,10 +1671,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &1462224208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,6 +1688,99 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxLevel: 10
+--- !u!1 &1579656904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1579656908}
+  - component: {fileID: 1579656907}
+  - component: {fileID: 1579656906}
+  - component: {fileID: 1579656905}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1579656905
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579656904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1579656906
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579656904}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1579656907
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579656904}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1579656908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579656904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.694893, y: 0.62, z: 119.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623549171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,10 +1842,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &1623549176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1835,6 +2013,89 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!1 &1759074661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759074662}
+  - component: {fileID: 1759074665}
+  - component: {fileID: 1759074664}
+  - component: {fileID: 1759074663}
+  m_Layer: 0
+  m_Name: 'Grunt Ranger '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1759074662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759074661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1822741312}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1759074663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759074661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b4fa26d6d18b74c839ee88b7f60bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Values:
+  - Level: 1
+    SpawnCount: 48
+    Modlevel: 0
+    dispatchedCount: 0
+  - Level: 2
+    SpawnCount: 96
+    Modlevel: 2
+    dispatchedCount: 0
+--- !u!114 &1759074664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759074661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d037eefaa53b10648828e0a48f14b96f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyId: 3
+  BaseLevel: 1
+  BaseRewardGold: 50
+  BaseRewardEXP: 75
+--- !u!114 &1759074665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759074661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConversionMode: 0
 --- !u!1 &1822741310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,34 +2127,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyWaves:
   - WaveNumber: 1
-    EnemiesForWave:
-    - spawnID: 1
-      SpawnCount: 10
-      level: 2
-    - spawnID: 3
-      SpawnCount: 6
-      level: 2
+    EnemiesForWave: []
     MaxEnemyAtOnce: 6
     RewardGold: 10
     RewardEXP: 10
     RewardSpawnID: 10
   - WaveNumber: 1
-    EnemiesForWave:
-    - spawnID: 0
-      SpawnCount: 0
-      level: 0
-    - spawnID: 0
-      SpawnCount: 0
-      level: 0
-    - spawnID: 0
-      SpawnCount: 0
-      level: 0
-    - spawnID: 0
-      SpawnCount: 0
-      level: 0
-    - spawnID: 0
-      SpawnCount: 0
-      level: 0
+    EnemiesForWave: []
     MaxEnemyAtOnce: 0
     RewardGold: 10
     RewardEXP: 10
@@ -1909,7 +2149,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 10, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1416394735}
+  - {fileID: 1759074662}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1942,8 +2184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24ded86dca81a34592e98b52801fdcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CountinScene: 0
-  MaxCountInScene: 60
+  CountInScene: 0
+  MaxCountInScene: 300
   ControlMode: 1
 --- !u!4 &2114242886
 Transform:
@@ -2011,10 +2253,10 @@ MonoBehaviour:
   Values:
   - SpawnID: 1
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
   - SpawnID: 3
     Spawn: 0
-    SpawnCount: 5
+    SpawnCount: 0
 --- !u!114 &2115174981
 MonoBehaviour:
   m_ObjectHideFlags: 0

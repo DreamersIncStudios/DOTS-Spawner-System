@@ -5,13 +5,14 @@ using Unity.Collections;
 
 
 
-namespace SpawnerSystem
+namespace SpawnerSystem.WaveSystem
 {
     [System.Serializable]
     public struct Wave
     {
         public int WaveNumber;
         public List<EnemyWaveSpec> EnemiesForWave;
+
         public uint MaxEnemyAtOnce;
         public int RewardGold;
         public int RewardEXP;

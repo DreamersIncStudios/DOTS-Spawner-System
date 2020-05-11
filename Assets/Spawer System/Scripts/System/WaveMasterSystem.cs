@@ -6,14 +6,14 @@ using Unity.Jobs;
 using Unity.Collections;
 using Utilities.ECS;
 
-namespace SpawnerSystem {
+namespace SpawnerSystem.WaveSystem {
 
     public class WaveMasterSystem : ComponentSystem
     {
         /*  Rewrite with spawn tag
 
                      */
-        public int wavecnt = 0;
+        public int wavecnt = 1;
         EntityManager mgr;
         protected override void OnCreate()
         {
@@ -23,79 +23,68 @@ namespace SpawnerSystem {
 
         }
 
-        bool CurWave(WaveComponent wave)
+        bool CurWave(WaveBuffer wave)
         {
-            return wave.Level == wavecnt;
+            return wave.spawnData.Level == wavecnt;
         }
 
-        bool WaveDefeat(WaveComponent wave)
-        {
-            if (wave.EnemiesDispatched > 0)
-            {
-                return wave.EnemiesDefeated == wave.EnemiesDispatched;
-            }
-            else
-                return false;
-        }
+
         SpawnController Control;
         EntityQuery m_Group;
+        bool StartNewWave = true;
+       public  int EnemiesInWave;
+        public int EnemiesDefeat;
+
+
         protected override void OnUpdate()
         {
-          
-            Entities.ForEach((Entity entity, ref WaveComponent wave) =>
-            {
-                if (!CurWave(wave))
-                    return;
-                if (Control == null)
-                    Control = SpawnController.Instance;
-                if(Control.MaxCountInScene != wave.MaxEnemyAtOnce)
-                    Control.MaxCountInScene = wave.MaxEnemyAtOnce;
-
-                if (!wave.AllEnemiesDispatched)
+            if (Control == null)
+                Control = SpawnController.Instance;
+            Entities.ForEach(( DynamicBuffer<WaveBuffer> waveBuffer, ref BaseEnemySpecsForWave baseEnemy) =>
                 {
-                    DynamicBuffer<WaveBufferComponent> WaveBuffer = EntityManager.GetBuffer<WaveBufferComponent>(entity);
-                    foreach (WaveBufferComponent waveEnemy in WaveBuffer)
+                    if (StartNewWave)
                     {
-                        int count = waveEnemy.EnemySpecForWave.SpawnCount;
-                        while (count != 0)
+                     
+                        foreach (WaveBuffer wave in waveBuffer)
                         {
-                            NativeArray<int> dispatched = new NativeArray<int>(1, Allocator.TempJob);
-
-                      
-                            var testing = new DispatchSpawnsToSpawnPointsEnemy()
+                            if (CurWave(wave))
                             {
-                                SpawnCount = count,
-                                SpawnID = waveEnemy.EnemySpecForWave.spawnID,
-                                count = dispatched,
-                                chunkEnemyBuffer = GetArchetypeChunkBufferType<EnemySpawnData>(),
-                                C1= GetArchetypeChunkComponentType<EnemySpawnTag>()
-                            };
+                                int count = wave.spawnData.SpawnCount;
+                             
+                                while (count != 0)
+                                {
+                                    NativeArray<int> dispatched = new NativeArray<int>(1, Allocator.TempJob);
+                                    var testing = new DispatchSpawnsToSpawnPointsEnemy()
+                                    {
+                                        SpawnCount = count,
+                                        SpawnID = baseEnemy.EnemyId,
+                                        count = dispatched,
+                                        chunkEnemyBuffer = GetArchetypeChunkBufferType<EnemySpawnData>(),
+                                        C1 = GetArchetypeChunkComponentType<EnemySpawnTag>()
+                                    };
 
-                            JobHandle handle= testing.Schedule(m_Group);
-                            handle.Complete();
+                                    JobHandle handle = testing.Schedule(m_Group);
+                                    handle.Complete();
 
-                            count -= testing.count[0];
-                            wave.EnemiesDispatched += dispatched[0];
-                            dispatched.Dispose();
+                                    count -= testing.count[0];
+                                   
+                                    dispatched.Dispose();
+                                }
+                                EnemiesInWave += wave.spawnData.SpawnCount;
+                            }
+
+
                         }
                     }
-                    wave.AllEnemiesDispatched = true;
-                }
-                WaveComponent currentwave = wave;
-                Entities.ForEach((ref Destroytag tag, ref EnemyTag Enemy) => {
-                    currentwave.EnemiesDefeated++;
-
-                });
-                wave = currentwave;
-                if (WaveDefeat(wave))
-                {
-                    PostUpdateCommands.DestroyEntity(entity);
-                    wavecnt++; }
             });
+            StartNewWave = false;
+            // write logic for spawning wave next 
+           
         }
-
-
     }
+
+
+    
 
     [Unity.Burst.BurstCompile]
     public struct DispatchSpawnsToSpawnPointsEnemy : IJobChunk
@@ -116,6 +105,7 @@ namespace SpawnerSystem {
                 {
                     if (count[0] >= SpawnCount)
                         return;
+
                     if (EnemyBuffer[i].spawnData.SpawnID == SpawnID)
                     {
                         EnemySpawnData temp = EnemyBuffer[i];

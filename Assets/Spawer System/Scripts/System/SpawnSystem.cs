@@ -11,7 +11,7 @@ using Unity.Mathematics;
 
 namespace SpawnerSystem
 {
-    [UpdateAfter(typeof(WaveMasterSystem))]
+    [UpdateAfter(typeof(WaveSystem.WaveMasterSystem))]
     public class SpawnSystem : ComponentSystem
     {
         public SpawnController SpawnControl;
@@ -47,27 +47,27 @@ namespace SpawnerSystem
         private void SpawnWave()
         {
 
-            Entities.ForEach((Entity SPEntity, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
-            {
-                DynamicBuffer<EnemySpawnData> Buffer = EntityManager.GetBuffer<EnemySpawnData>(SPEntity);
-                for(int cnt=0;cnt<Buffer.Length;cnt++)
-                {
-                    if (!SpawnControl.CanSpawn)
-                        return;
-                    if (Buffer[cnt].spawnData.Spawn) {
-                        Enemy spawn = EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID);
-                            Object.Instantiate(spawn.GO, (Vector3)transform.Position+spawn.SpawnOffset, transform.Rotation);
-                            EnemySpawnData tempData = Buffer[cnt];
-                            tempData.spawnData.SpawnCount--;
-                            if (tempData.spawnData.SpawnCount == 0)
-                                tempData.spawnData.Spawn = false;
-                            Buffer[cnt] = tempData;
-                            SpawnControl.CountinScene++;
+            //Entities.ForEach((Entity SPEntity, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
+            //{
+            //    DynamicBuffer<EnemySpawnData> Buffer = EntityManager.GetBuffer<EnemySpawnData>(SPEntity);
+            //    for(int cnt=0;cnt<Buffer.Length;cnt++)
+            //    {
+            //        if (!SpawnControl.CanSpawn)
+            //            return;
+            //        if (Buffer[cnt].spawnData.Spawn) {
+            //            Enemy spawn = EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID);
+            //                Object.Instantiate(spawn.GO, (Vector3)transform.Position+spawn.SpawnOffset, transform.Rotation);
+            //                EnemySpawnData tempData = Buffer[cnt];
+            //                tempData.spawnData.SpawnCount--;
+            //                if (tempData.spawnData.SpawnCount == 0)
+            //                    tempData.spawnData.Spawn = false;
+            //                Buffer[cnt] = tempData;
+            //                SpawnControl.CountInScene++;
                         
       
-                    }
-                }
-            });
+            //        }
+            //    }
+            //});
 
         }
         public void SpawnGame()
@@ -75,8 +75,9 @@ namespace SpawnerSystem
             NativeArray<LocalToWorld> NPCPosition = GetEntityQuery(typeof(NpcTag), typeof(LocalToWorld)).ToComponentDataArray<LocalToWorld>(Allocator.TempJob);
             Entities.ForEach((ref WorldSpawn Areas ) => 
             {
-                Areas.CurrentNpcCount = 0;
+                //Areas.CurrentNpcCount = 0;
                 WorldSpawn TempArea = Areas;
+                TempArea.CurrentNpcCount = 0;
                 Entities.ForEach((ref NpcTag NPC, ref LocalToWorld Pos) => 
                 {
                    float3  displacementFromCenterOfArea = Pos.Position - TempArea.CenterPostion;
@@ -90,7 +91,7 @@ namespace SpawnerSystem
                 if (Areas.CurrentNpcCount < Areas.MaxNpcCount)
                 {
                     int SpawnCount = Areas.MaxNpcCount - Areas.CurrentNpcCount;
-                    Debug.Log("Spawn some more");
+
                     Entities.ForEach((Entity SPEntity, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
                     {
                         float3 displacementFromCenterOfArea = transform.Position - TempArea.CenterPostion;
@@ -106,6 +107,7 @@ namespace SpawnerSystem
                                     Object.Instantiate(spawn.GO, (Vector3)transform.Position + spawn.SpawnOffset, transform.Rotation);
                                     EnemySpawnData tempData = Buffer[cnt];
                                     tempData.spawnData.SpawnCount--;
+                                    SpawnControl.CountInScene++;
                                     if (tempData.spawnData.SpawnCount == 0)
                                         tempData.spawnData.Spawn = false;
                                     Buffer[cnt] = tempData;

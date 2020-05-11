@@ -24,7 +24,7 @@ namespace SpawnerSystem
         }
         public Data spawnData;
 
-        public static implicit operator int(ItemSpawnData e) { return e; }
+        public static implicit operator Data(ItemSpawnData e) { return e; }
 
         public static implicit operator ItemSpawnData(Data e) { return new ItemSpawnData { spawnData = e }; }
     }

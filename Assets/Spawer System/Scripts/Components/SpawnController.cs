@@ -7,8 +7,8 @@ namespace SpawnerSystem
     public class SpawnController : MonoBehaviour
     {
         [HideInInspector]public static SpawnController Instance;
-        public bool CanSpawn { get { return CountinScene < MaxCountInScene; } }
-        public uint CountinScene;
+        public bool CanSpawn { get { return CountInScene < MaxCountInScene; } }
+        public uint CountInScene;
         public uint MaxCountInScene;
         public SpawnControlMode ControlMode;
         private void Awake()

@@ -5,7 +5,7 @@ using Unity.Entities;
 using Unity.Transforms;
 
 
-namespace SpawnerSystem
+namespace SpawnerSystem.WaveSystem
 {
     public class SpawnMaster : MonoBehaviour
     {

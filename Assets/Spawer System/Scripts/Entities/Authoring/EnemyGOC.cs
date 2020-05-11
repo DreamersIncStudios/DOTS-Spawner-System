@@ -39,7 +39,8 @@ namespace SpawnerSystem
             spawnItemDropSpawnPoint(mgr);   
             
             mgr.AddComponentData(reference, new Destroytag() { delay = 0.0f });
-            SpawnController.Instance.CountinScene--;
+
+            SpawnController.Instance.CountInScene--;
             Destroy(this.gameObject);
 
         }
