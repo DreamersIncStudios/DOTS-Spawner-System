@@ -9,7 +9,7 @@ namespace SpawnerSystem {
         {
 
             public int SpawnID;
-            public bool Spawn;
+            public bool Spawn { get { return SpawnCount > 0; } }
             public int SpawnCount;
         }
         public Data spawnData;

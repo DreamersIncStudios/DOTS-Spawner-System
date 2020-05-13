@@ -14,6 +14,7 @@ namespace SpawnerSystem.WaveSystem
         {
             public int Level;
             public int SpawnCount;
+            public int MaxSpawnsPerSpawnRoutine; // This many entities will spawn when a spawn call happens Someone rename this :P
             public int Modlevel;
             public int SpawnLevel(int Base) { return Base + Modlevel; }
             public int dispatchedCount;

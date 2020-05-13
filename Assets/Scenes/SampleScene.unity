@@ -171,10 +171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &173436487
 MonoBehaviour:
@@ -249,10 +247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &178804476
 MonoBehaviour:
@@ -409,10 +405,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &298277784
 MonoBehaviour:
@@ -487,10 +481,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &314637631
 MonoBehaviour:
@@ -565,10 +557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &377295262
 MonoBehaviour:
@@ -630,10 +620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &624632046
 MonoBehaviour:
@@ -721,10 +709,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &631860977
 MonoBehaviour:
@@ -891,10 +877,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &851190697
 MonoBehaviour:
@@ -1077,10 +1061,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &977223479
 MonoBehaviour:
@@ -1155,10 +1137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &1050318083
 MonoBehaviour:
@@ -1233,10 +1213,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &1235060893
 MonoBehaviour:
@@ -1311,10 +1289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &1288930805
 MonoBehaviour:
@@ -1440,10 +1416,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &1342345106
 MonoBehaviour:
@@ -1574,11 +1548,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - Level: 1
-    SpawnCount: 48
+    SpawnCount: 100
+    MaxSpawnsPerSpawnRoutine: 100
     Modlevel: 0
     dispatchedCount: 0
   - Level: 2
     SpawnCount: 96
+    MaxSpawnsPerSpawnRoutine: 16
     Modlevel: 2
     dispatchedCount: 0
 --- !u!114 &1416394737
@@ -1670,10 +1646,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &1462224208
 MonoBehaviour:
@@ -1688,99 +1662,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxLevel: 10
---- !u!1 &1579656904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1579656908}
-  - component: {fileID: 1579656907}
-  - component: {fileID: 1579656906}
-  - component: {fileID: 1579656905}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1579656905
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579656904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1579656906
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579656904}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1579656907
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579656904}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1579656908
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579656904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.694893, y: 0.62, z: 119.84}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623549171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,10 +1722,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &1623549176
 MonoBehaviour:
@@ -2060,11 +1939,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - Level: 1
-    SpawnCount: 48
+    SpawnCount: 100
+    MaxSpawnsPerSpawnRoutine: 100
     Modlevel: 0
     dispatchedCount: 0
   - Level: 2
     SpawnCount: 96
+    MaxSpawnsPerSpawnRoutine: 16
     Modlevel: 2
     dispatchedCount: 0
 --- !u!114 &1759074664
@@ -2252,10 +2133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    Spawn: 0
     SpawnCount: 0
   - SpawnID: 3
-    Spawn: 0
     SpawnCount: 0
 --- !u!114 &2115174981
 MonoBehaviour:

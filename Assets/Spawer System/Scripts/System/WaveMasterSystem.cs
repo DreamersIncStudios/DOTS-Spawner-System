@@ -4,7 +4,9 @@ using UnityEngine;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Collections;
+using Unity.Transforms;
 using Utilities.ECS;
+using TMPro;
 
 namespace SpawnerSystem.WaveSystem {
 
@@ -32,14 +34,17 @@ namespace SpawnerSystem.WaveSystem {
         SpawnController Control;
         EntityQuery m_Group;
         bool StartNewWave = true;
+        bool spawnWave = false;
        public  int EnemiesInWave;
         public int EnemiesDefeat;
 
 
         protected override void OnUpdate()
         {
-            if (Control == null)
-                Control = SpawnController.Instance;
+
+
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+                spawnWave = true;
             Entities.ForEach(( DynamicBuffer<WaveBuffer> waveBuffer, ref BaseEnemySpecsForWave baseEnemy) =>
                 {
                     if (StartNewWave)
@@ -79,6 +84,48 @@ namespace SpawnerSystem.WaveSystem {
             });
             StartNewWave = false;
             // write logic for spawning wave next 
+            if (spawnWave) {
+                Entities.ForEach((DynamicBuffer<WaveBuffer> waveBuffer, ref BaseEnemySpecsForWave baseEnemy) =>
+                {
+                    foreach (WaveBuffer wave in waveBuffer)
+                    {
+                        if (CurWave(wave))
+                        {
+                            int spawnnumber = wave.spawnData.MaxSpawnsPerSpawnRoutine;
+                            Entities.ForEach((DynamicBuffer<EnemySpawnData> Buffer,ref EnemySpawnTag Tag, ref LocalToWorld transform) => {
+
+                                while (spawnnumber>0) {
+                                    for (int i = 0; i < Buffer.Length; i++)
+                                    {
+                                        if (spawnnumber == 0)
+                                            goto End;
+
+                                            Object.Instantiate(EnemyDatabase.GetEnemy(Buffer[i].spawnData.SpawnID).GO, transform.Position, transform.Rotation);
+                                            EnemySpawnData tempData = Buffer[i];
+                                            tempData.spawnData.SpawnCount--;
+                                            Buffer[i] = tempData;
+                                            spawnnumber--;
+  
+                                    }
+                                   }
+                                End:
+                                //convert to a for loop 
+                                spawnnumber = 0;
+
+                            });
+
+                        }
+                    }
+                });
+
+                    spawnWave = false;
+            }
+            else
+            { 
+                //Check how many enemy can be spawned;
+            
+            }
+
            
         }
     }
@@ -110,7 +157,7 @@ namespace SpawnerSystem.WaveSystem {
                     {
                         EnemySpawnData temp = EnemyBuffer[i];
                         temp.spawnData.SpawnCount++;
-                        temp.spawnData.Spawn = true;
+
                         EnemyBuffer[i] = temp;
                         count[0]++;
 
