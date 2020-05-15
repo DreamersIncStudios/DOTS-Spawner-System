@@ -126,7 +126,7 @@ MonoBehaviour:
       probabilityPercent: 0
       probabilityRangeFrom: 0
       probabilityRangeTo: 0
-  numOfDropitems: 10
+  numOfDropitems: 2
 --- !u!114 &-4593606634555942124
 MonoBehaviour:
   m_ObjectHideFlags: 0

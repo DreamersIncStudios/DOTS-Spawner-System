@@ -92,6 +92,11 @@ PrefabInstance:
       propertyPath: LootTable.Array.data[0].spawnData.probabilityWeight
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6442835480231019418, guid: d0268061b4bcb804eb18aadda5796aab,
+        type: 3}
+      propertyPath: numOfDropitems
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d0268061b4bcb804eb18aadda5796aab, type: 3}

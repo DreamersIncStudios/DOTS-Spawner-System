@@ -1,13 +1,15 @@
 ﻿namespace SpawnerSystem.ScriptableObjects
 {
-    public interface ICharacterData
+    public interface ICharacterStat
     {
-        string Name { get;  }
+
         uint Level { get;  }
         int BaseHealth { get; }
         int BaseMana { get; }
 
+    }
 
-
+    public interface ICharacterBase {
+        string Name { get; }
     }
 }

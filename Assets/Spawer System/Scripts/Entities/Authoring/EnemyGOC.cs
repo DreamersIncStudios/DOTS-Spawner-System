@@ -71,7 +71,8 @@ namespace SpawnerSystem
             MGR.AddComponentData(entity, new LocalToWorld() { Value = transform.localToWorldMatrix});
             MGR.AddComponentData(entity, new ProbTotal() { probabilityTotalWeight = 0.0f });
 
-            MGR.SetName(entity,"Loot Spawn Point");
+            MGR.SetName(entity,"Loot Spawn Point");// This wont build why ?
+
 
         }
 

@@ -35,7 +35,8 @@ namespace SpawnerSystem.WaveSystem {
         EntityQuery m_Group;
         bool StartNewWave = true;
         bool spawnWave = false;
-       public  int EnemiesInWave;
+        int EnemiesInWave;
+        int EnemiesSpawned;
         public int EnemiesDefeat;
 
 
@@ -94,20 +95,22 @@ namespace SpawnerSystem.WaveSystem {
                             int spawnnumber = wave.spawnData.MaxSpawnsPerSpawnRoutine;
                             Entities.ForEach((DynamicBuffer<EnemySpawnData> Buffer,ref EnemySpawnTag Tag, ref LocalToWorld transform) => {
 
-                                while (spawnnumber>0) {
+                                while (spawnnumber > 0)
+                                {
                                     for (int i = 0; i < Buffer.Length; i++)
                                     {
                                         if (spawnnumber == 0)
                                             goto End;
 
-                                            Object.Instantiate(EnemyDatabase.GetEnemy(Buffer[i].spawnData.SpawnID).GO, transform.Position, transform.Rotation);
-                                            EnemySpawnData tempData = Buffer[i];
-                                            tempData.spawnData.SpawnCount--;
-                                            Buffer[i] = tempData;
-                                            spawnnumber--;
-  
+                                        Object.Instantiate(EnemyDatabase.GetEnemy(Buffer[i].spawnData.SpawnID).GO, transform.Position, transform.Rotation);
+                                        EnemySpawnData tempData = Buffer[i];
+                                        tempData.spawnData.SpawnCount--;
+                                        Buffer[i] = tempData;
+                                        EnemiesSpawned++;
+                                        spawnnumber--;
+
                                     }
-                                   }
+                                }
                                 End:
                                 //convert to a for loop 
                                 spawnnumber = 0;
