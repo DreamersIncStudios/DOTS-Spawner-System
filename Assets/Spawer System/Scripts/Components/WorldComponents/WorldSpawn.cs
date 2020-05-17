@@ -11,9 +11,11 @@ namespace SpawnerSystem.WorldLevel
         public float3 CenterPostion;
         public int MaxNpcCount;
         public int CurrentNpcCount;
-
-        public int CurrentEnemyNPCCount;
-
+        public int CurrentCitizenNPCCount;
+        
+        public int EnemyNPCCount;
+        public int CitizenNPCCount { get { return MaxNpcCount - EnemyNPCCount; } }
+        public int SpawnCount { get { return MaxNpcCount - CurrentNpcCount; } }
 
     }
 

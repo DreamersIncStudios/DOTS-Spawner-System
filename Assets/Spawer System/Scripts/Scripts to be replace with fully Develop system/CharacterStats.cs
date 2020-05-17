@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
+    public string Name;
     [Range(0,2000)]
     public int Health;
     [Range(0, 2000)]

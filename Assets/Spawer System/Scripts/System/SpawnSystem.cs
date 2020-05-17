@@ -7,7 +7,7 @@ using UnityEngine.AI;
 using SpawnerSystem.WorldLevel;
 using Unity.Collections;
 using Unity.Mathematics;
-
+using SpawnerSystem.ScriptableObjects;
 
 namespace SpawnerSystem
 {
@@ -44,32 +44,72 @@ namespace SpawnerSystem
                             TempArea.CurrentNpcCount++;
 
                     });
+                    Entities.ForEach((ref CitizenNPCTag NPC, ref LocalToWorld Pos) =>
+                    {
+                        float3 displacementFromCenterOfArea = Pos.Position - TempArea.CenterPostion;
+                        if (Mathf.Abs(displacementFromCenterOfArea.x) < TempArea.MaxDisplacementFromCenter.x && Mathf.Abs(displacementFromCenterOfArea.y) < TempArea.MaxDisplacementFromCenter.y && Mathf.Abs(displacementFromCenterOfArea.z) < TempArea.MaxDisplacementFromCenter.z)
+                            TempArea.CurrentNpcCount++;
+                        TempArea.CurrentCitizenNPCCount++;
+                    });
 
                     Areas = TempArea;
 
-                    if (Areas.CurrentNpcCount < Areas.MaxNpcCount)
-                    {
-                        int SpawnCount = Areas.MaxNpcCount - Areas.CurrentNpcCount;
 
+                    if (Areas.CitizenNPCCount-Areas.CurrentCitizenNPCCount > 0)
+                    {
+
+                        Entities.ForEach((Entity SPEntity, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
+                    {
+                        float3 displacementFromCenterOfArea = transform.Position - TempArea.CenterPostion;
+
+                        if (Mathf.Abs(displacementFromCenterOfArea.x) < TempArea.MaxDisplacementFromCenter.x && Mathf.Abs(displacementFromCenterOfArea.y) < TempArea.MaxDisplacementFromCenter.y && Mathf.Abs(displacementFromCenterOfArea.z) < TempArea.MaxDisplacementFromCenter.z)
+                        {
+                            Vector3 femalepoint;
+                            if (RandomPoint(transform.Position, 10.5f, out femalepoint))
+                            {
+                                GenericNPC test = new GenericNPC(Gender.Female);
+                                GameObject GOtest = Object.Instantiate(test.GO, femalepoint + new Vector3(0, 0, 0), transform.Rotation);
+                                GOtest.GetComponent<Renderer>().material.color = test.BaseColor;
+                                GOtest.GetComponent<CharacterStats>().Name = test.Name;
+                            }
+                                Vector3 Malepoint;
+                            if (RandomPoint(transform.Position, 10.5f, out Malepoint))
+                            {
+                                GenericNPC test2 = new GenericNPC(Gender.Male);
+                                GameObject GOtest2 = Object.Instantiate(test2.GO, Malepoint + new Vector3(0, 0, 0), transform.Rotation);
+                                GOtest2.GetComponent<Renderer>().material.color = test2.BaseColor;
+                                GOtest2.GetComponent<CharacterStats>().Name = test2.Name;
+                            }
+                        }
+                    });
+                    }
+                    Areas = TempArea;
+
+                    if (Areas.SpawnCount > 0)
+                    {
                         Entities.ForEach((Entity SPEntity, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
                         {
                             float3 displacementFromCenterOfArea = transform.Position - TempArea.CenterPostion;
+
                             if (Mathf.Abs(displacementFromCenterOfArea.x) < TempArea.MaxDisplacementFromCenter.x && Mathf.Abs(displacementFromCenterOfArea.y) < TempArea.MaxDisplacementFromCenter.y && Mathf.Abs(displacementFromCenterOfArea.z) < TempArea.MaxDisplacementFromCenter.z)
                             {
 
                                 DynamicBuffer<EnemySpawnData> Buffer = EntityManager.GetBuffer<EnemySpawnData>(SPEntity);
                                 for (int cnt = 0; cnt < Buffer.Length; cnt++)
                                 {
-                                    if (SpawnCount != 0)
+                                    if (TempArea.SpawnCount != 0)
                                     {
-                                        ScriptableObjects.Enemy spawn = EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID);
-                                        //add random point logic 
-                                        Object.Instantiate(spawn.GO, (Vector3)transform.Position + spawn.SpawnOffset, transform.Rotation);
-                                        EnemySpawnData tempData = Buffer[cnt];
-                                        tempData.spawnData.SpawnCount--;
-                                        SpawnControl.CountInScene++;
-                                        Buffer[cnt] = tempData;
-                                        SpawnCount--;
+                                        Vector3 SpawnPoint;
+                                        if (RandomPoint(transform.Position, 10.5f, out SpawnPoint))
+                                        {
+                                            ScriptableObjects.Enemy spawn = EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID);
+                                            //add random point logic 
+                                            Object.Instantiate(spawn.GO, SpawnPoint + spawn.SpawnOffset, transform.Rotation);
+                                            EnemySpawnData tempData = Buffer[cnt];
+                                            tempData.spawnData.SpawnCount--;
+                                            SpawnControl.CountInScene++;
+                                            Buffer[cnt] = tempData;
+                                        }
                                     }
 
                                 }

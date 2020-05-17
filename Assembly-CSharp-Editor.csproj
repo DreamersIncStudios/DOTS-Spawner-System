@@ -65,126 +65,6 @@
   <ItemGroup>
     <Compile Include="Assets\ScriptableObjects for Spawner\Editor\SOEditor.cs" />
     <Compile Include="Assets\ScriptableObjects for Spawner\Editor\ScriptableObjectUtility.cs" />
-    <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.CacheServer">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Jobs">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Jobs.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Entities.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Properties.UI">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Properties.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Serialization.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Serialization.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Properties">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Scenes.Hybrid">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Scenes.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Extensions">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Extensions.Hybrid">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Entities.BuildUtils">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Serialization">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Entities.Hybrid">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Deformations">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Deformations.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Properties.UI.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Properties.UI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Entities">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Transforms">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Transforms.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ScriptableBuildPipeline">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Transforms.Hybrid">
-      <HintPath>D:/Main Game Folder/DOTS Spawner System/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.8f1/Unity/Editor/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -748,6 +628,166 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{6CF817B5-032B-084C-7CEA-D7DF09FD0003}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{66732CD2-0CFC-D83A-1D79-400F40300CDA}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{32619BB5-D082-CACC-739B-BA030483E9C1}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{4384E365-E316-8939-49BD-DA6341EFF5A4}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.CacheServer.csproj">
+      <Project>{04393080-9529-E60C-B749-ACBFA00B3E4C}</Project>
+      <Name>UnityEditor.CacheServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
+      <Project>{3DC35172-27AD-5D22-691C-8AF946B8966B}</Project>
+      <Name>Unity.ScriptableBuildPipeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{8B8A3378-7AE5-219F-9462-6985495459C5}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{D5771B8C-119D-5A98-F318-9834C7EE261E}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Jobs.csproj">
+      <Project>{F6E5EF5A-608E-C39A-D9F9-E3B91B970F8D}</Project>
+      <Name>Unity.Jobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Jobs.Editor.csproj">
+      <Project>{95C7AC0C-C67E-3FDD-B6C7-397AA04953F8}</Project>
+      <Name>Unity.Jobs.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.Editor.csproj">
+      <Project>{3671120C-F2CE-ED62-1DAD-A1A0AFE0A2E7}</Project>
+      <Name>Unity.Entities.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{F1DB7197-589F-0D37-FEF9-E70BFDCB411A}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.csproj">
+      <Project>{6A63DF70-BFBE-FA3E-F6C6-4EA4969FC987}</Project>
+      <Name>Unity.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Properties.UI.csproj">
+      <Project>{A123FFF7-3F1F-70AF-67A4-999521981F14}</Project>
+      <Name>Unity.Properties.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Serialization.Editor.csproj">
+      <Project>{363DBD1B-9DF6-5429-2149-100620266978}</Project>
+      <Name>Unity.Serialization.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Properties.csproj">
+      <Project>{D3B719AA-D68E-6CF8-1BEE-1C4D460A6922}</Project>
+      <Name>Unity.Properties</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Scenes.Hybrid.csproj">
+      <Project>{B4677307-07D0-5440-9A40-7EFA2BC94A3D}</Project>
+      <Name>Unity.Scenes.Hybrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Scenes.Editor.csproj">
+      <Project>{8F610855-4E30-7374-BD52-DB956D0ABC54}</Project>
+      <Name>Unity.Scenes.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{2E3DFDCC-88B8-355B-6D28-88DD8905D4BB}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Extensions.csproj">
+      <Project>{D55F669A-834C-0184-F637-122E1D2883ED}</Project>
+      <Name>Unity.Mathematics.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{A4B698DB-9ED7-B80A-9E29-3718C465BD24}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{A9117729-25C1-E2D6-8FCE-F9B2B1CAD6B6}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Extensions.Hybrid.csproj">
+      <Project>{F669B59F-5463-66EF-BB12-7ECBE5551B1F}</Project>
+      <Name>Unity.Mathematics.Extensions.Hybrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{4C98F004-BD95-DEAC-DEFF-A040EEE9334D}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
+      <Project>{530C6212-956B-8D1D-8E0D-1ABF6AD4FD9D}</Project>
+      <Name>Unity.CollabProxy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.BuildUtils.csproj">
+      <Project>{19B8F383-FABE-BAAD-75F1-3D74090A10EF}</Project>
+      <Name>Unity.Entities.BuildUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Serialization.csproj">
+      <Project>{46597CE0-9114-2278-FC9B-139FFF3EA7A6}</Project>
+      <Name>Unity.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{486D107A-1D5F-4AAD-D03F-8EC39F0DD747}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.Hybrid.EndToEnd.Tests.csproj">
+      <Project>{69244784-C59E-AC34-7442-932CC0062662}</Project>
+      <Name>Unity.Entities.Hybrid.EndToEnd.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.Hybrid.csproj">
+      <Project>{DB55A0F0-4D56-134D-1EA4-9E88333E93AD}</Project>
+      <Name>Unity.Entities.Hybrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{34BA2AE2-BB92-36DF-D092-21BC913D48B0}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Deformations.csproj">
+      <Project>{F8A3626A-174F-0436-A554-FAA55ECFA120}</Project>
+      <Name>Unity.Deformations</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Properties.UI.Editor.csproj">
+      <Project>{4F259098-C19B-7034-394F-84C671C69D17}</Project>
+      <Name>Unity.Properties.UI.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Entities.csproj">
+      <Project>{2BF7F57E-4BBA-DE3A-2D25-17A6FD2E5606}</Project>
+      <Name>Unity.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Transforms.csproj">
+      <Project>{D4C7E427-B616-3AE6-A8F9-72D874E0E65C}</Project>
+      <Name>Unity.Transforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Transforms.Editor.csproj">
+      <Project>{DFA2DF8E-1A31-3E92-958F-4F7035A369CB}</Project>
+      <Name>Unity.Transforms.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.csproj">
+      <Project>{89D816CE-5C1E-E7B2-969E-A32B8DA5622F}</Project>
+      <Name>Unity.ScriptableBuildPipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{7AE659D3-E2E9-F29E-EB96-E625784E0C98}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{78876B94-80C8-6BCF-2F1D-4F5B55A7A609}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{B3248C80-E2FB-DF42-03B1-1F5F7D52A8B3}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Transforms.Hybrid.csproj">
+      <Project>{1DD80618-1AAF-3DF3-8E82-27CD37D7C347}</Project>
+      <Name>Unity.Transforms.Hybrid</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

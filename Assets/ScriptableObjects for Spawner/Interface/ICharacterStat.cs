@@ -11,5 +11,8 @@
 
     public interface ICharacterBase {
         string Name { get; }
+        Gender gender { get; }
     }
+
+    public enum Gender{ Female, Male, Androgynous }
 }

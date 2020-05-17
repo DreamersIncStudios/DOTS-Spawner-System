@@ -29,4 +29,6 @@
         Shelby,
         Wynnie,
     }
+
+    public enum NPCNamesMixed { }
 }
