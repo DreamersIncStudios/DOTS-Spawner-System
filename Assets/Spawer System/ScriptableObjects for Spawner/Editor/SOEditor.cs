@@ -1,5 +1,8 @@
 ﻿using UnityEditor;
+using UnityEngine;
 using SpawnerSystem.ScriptableObjects;
+
+
 namespace SpawnerSystem.Editors
 {
 
@@ -7,11 +10,13 @@ namespace SpawnerSystem.Editors
     {
         [MenuItem("Assets/Create/RPG/Enemy")]
 
-        static public void CreateEnemy() {
+        static public void CreateEnemy()
+        {
             Enemy enemy;
-            ScriptableObjectUtility.CreateAsset<Enemy>("Enemy" ,  out enemy);
+            ScriptableObjectUtility.CreateAsset<Enemy>("Enemy", out enemy);
             EnemyDatabase.LoadDatabaseForce();
             enemy.SpawnID = EnemyDatabase._Enemies.Count + 1;
+            enemy.Scale = Vector3.one;
         }
 
         [MenuItem("Assets/Create/RPG/Recovery Item")]

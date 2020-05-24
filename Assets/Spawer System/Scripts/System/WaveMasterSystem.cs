@@ -6,7 +6,6 @@ using Unity.Jobs;
 using Unity.Collections;
 using Unity.Transforms;
 using Utilities.ECS;
-using TMPro;
 
 namespace SpawnerSystem.WaveSystem {
 

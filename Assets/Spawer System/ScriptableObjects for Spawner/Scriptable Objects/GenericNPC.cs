@@ -15,7 +15,7 @@ namespace SpawnerSystem.ScriptableObjects
         public Gender gender { get { return _gender; } }
 
         public GameObject GO { get { return _GO; } }
-        public Vector3 Scale { get { return _scale; } }
+        public Vector3 Scale { get { return _scale; } set { _scale = value; } }
     
         public GenericNPC(Gender gender)
         {

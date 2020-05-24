@@ -58,7 +58,7 @@ namespace SpawnerSystem
                     if (Areas.CitizenNPCCount-Areas.CurrentCitizenNPCCount > 0)
                     {
 
-                        Entities.ForEach((Entity SPEntity, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
+                        Entities.ForEach((Entity SPEntity, ref NPCSpawnTag Tag, ref LocalToWorld transform) =>
                     {
                         float3 displacementFromCenterOfArea = transform.Position - TempArea.CenterPostion;
 
