@@ -8,11 +8,11 @@ namespace SpawnerSystem.ScriptableObjects
     public class LeaderComponent : MonoBehaviour,IConvertGameObjectToEntity
     {
         public GameObject BackupLeader;
-        public List<SquadMemberBuffer> Squad;
+        public List<SquadEntityAdder> Squad;
         public Entity Self { get { return selfRef; } }
         Entity selfRef;
         public LeaderComponent() { }
-        public LeaderComponent(GameObject Back, List<SquadMemberBuffer> squad) 
+        public LeaderComponent(GameObject Back, List<SquadEntityAdder> squad) 
         {
             BackupLeader = Back;
             Squad = squad;
@@ -28,6 +28,16 @@ namespace SpawnerSystem.ScriptableObjects
 
  
     }
+
+    public class SquadMember : MonoBehaviour, IConvertGameObjectToEntity
+    {
+        public Entity Self { get { return selfRef; } }
+        Entity selfRef;
+        public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+        {
+            selfRef = entity;
+        }
+    }
     public struct LeaderTag : IComponentData
     {
        public Entity BackupLeader;
@@ -42,16 +52,39 @@ namespace SpawnerSystem.ScriptableObjects
         public Entity SquadMember;
 
     }
-
+    [System.Serializable]
+    public struct SquadEntityAdder {
+        public GameObject GO;
+        public bool Added;
+    }
 
    public class SquadUP : ComponentSystem
     {
         protected override void OnUpdate()
         {
-            Entities.ForEach((Entity entity, ref LeaderTag Tag, LeaderComponent Leader) => {
+            Entities.ForEach((  ref LeaderTag Tag, LeaderComponent Leader) => {
                 if(Leader.BackupLeader !=null)
-                Tag.BackupLeader = Leader.BackupLeader.GetComponent<EnemyGOC>().reference;
+                Tag.BackupLeader = Leader.BackupLeader.GetComponent<SquadMember>().Self;
             
+            });
+
+            Entities.ForEach((DynamicBuffer<SquadMemberBuffer> Buffer, LeaderComponent Leader) => {
+                //foreach (SquadEntityAdder Adder in Leader.Squad)
+                for (int i = 0; i < Leader.Squad.Count-1; i++)
+                {
+                    SquadEntityAdder Adder = Leader.Squad[i];
+                    if (!Adder.Added)
+                    {
+                        SquadMemberBuffer temp = new SquadMemberBuffer()
+                        {
+                            SquadMember = Adder.GO.GetComponent<SquadMember>().Self
+                        };
+                        Buffer.Add(temp);
+                        Adder.Added = true;
+                        Leader.Squad[i] = Adder;
+                    }
+                }
+
             });
         }
     }

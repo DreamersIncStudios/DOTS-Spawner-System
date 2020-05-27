@@ -18,16 +18,30 @@ namespace SpawnerSystem.ScriptableObjects
 
         public int BackupLeaderID { get { return backupLeaderID; } }
 
-        public List<SquadMemberID> SquadMemberID { get { return squadMemberID; }}
+        public List<SquadMemberID> SquadMemberIDs { get { return squadMemberID; }}
 
         public void Spawn(Vector3 Position) {
             GameObject leaderGO = Instantiate(EnemyDatabase.GetEnemy(leaderID).GO, Position, Quaternion.identity);
             GameObject BackupGO = Instantiate(EnemyDatabase.GetEnemy(BackupLeaderID).GO, Position, Quaternion.identity);
-
+            BackupGO.AddComponent<SquadMember>();
             LeaderComponent test = leaderGO.AddComponent<LeaderComponent>();
             test.BackupLeader = BackupGO;
-            
+            test.Squad = new List<SquadEntityAdder>();
+            foreach (SquadMemberID squadMember in SquadMemberIDs)
+            {
+                GameObject memberGO = null;
+                for (int i = 0; i < squadMember.NumberOfSpawns; i++)
+                {
+                    memberGO = Instantiate(EnemyDatabase.GetEnemy(squadMember.ID).GO, Position, Quaternion.identity);
+                    memberGO.AddComponent<SquadMember>();
 
+                    test.Squad.Add(new SquadEntityAdder()
+                    {
+                        GO = memberGO.gameObject,
+                        Added = false
+                    } );
+                }
+            }
         }
     }
 
@@ -35,7 +49,7 @@ namespace SpawnerSystem.ScriptableObjects
     {
         int LeaderID { get;}
         int BackupLeaderID { get;}
-        List<SquadMemberID> SquadMemberID { get; }
+        List<SquadMemberID> SquadMemberIDs { get; }
     }
     [System.Serializable]
 

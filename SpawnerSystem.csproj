@@ -89,10 +89,6 @@
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint\SpawnTags\EnemySpawnTag.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint\SpawnTags\NPCSpawnTag.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\Spawner.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\Components\Squads\BaseComponent.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\Components\Squads\Enlisted.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\Components\Squads\Officer.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\Components\Squads\SquadBuffer.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\Wave Control\BaseEnemySpecsForWave.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\Wave Control\WaveBuffer.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\WaveSpawnMasterComponents.cs" />
