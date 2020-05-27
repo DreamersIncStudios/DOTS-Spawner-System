@@ -28,5 +28,15 @@ namespace SpawnerSystem.Editors
            ItemDatabase.LoadDatabaseForce();
             Item.SpawnID = ItemDatabase.droppables.Count + 1;
         }
+
+        [MenuItem("Assets/Create/RPG/Squad")]
+        static public void CreateSquadSO()
+        {
+            SquadSO squad;
+            ScriptableObjectUtility.CreateAsset<SquadSO>("Squad", out squad);
+            SquadDatabase.LoadDatabaseForce();
+            squad.SpawnID = SquadDatabase.Squads.Count + 1;
+        }
+
     }
 }
