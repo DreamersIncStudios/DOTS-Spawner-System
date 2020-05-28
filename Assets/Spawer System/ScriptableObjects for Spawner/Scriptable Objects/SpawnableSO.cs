@@ -5,7 +5,7 @@ using SpawnerSystem.ScriptableObjects;
 
 namespace SpawnerSystem
 {
-    public class SpawnableSO : ScriptableObject, ISpawnable,IObject
+    public abstract class SpawnableSO : ScriptableObject, ISpawnable,IObject
     {
         [SerializeField] int _spawnID;
         [SerializeField] Vector3 _spawnOffset;
@@ -15,5 +15,7 @@ namespace SpawnerSystem
         public Vector3 SpawnOffset { get { return _spawnOffset; } }
         public GameObject GO { get { return _GO; } }
         public Vector3 Scale { get { return _scale; } set { _scale = value; } }
+
+        public abstract GameObject Spawn(Vector3 Position);
     }
 }

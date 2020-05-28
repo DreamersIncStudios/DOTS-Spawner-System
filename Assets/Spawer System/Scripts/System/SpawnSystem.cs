@@ -102,9 +102,7 @@ namespace SpawnerSystem
                                         Vector3 SpawnPoint;
                                         if (RandomPoint(transform.Position, 10.5f, out SpawnPoint))
                                         {
-                                            ScriptableObjects.Enemy spawn = EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID);
-                                            //add random point logic 
-                                            Object.Instantiate(spawn.GO, SpawnPoint + spawn.SpawnOffset, transform.Rotation);
+                                            EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID).Spawn(SpawnPoint);
                                             EnemySpawnData tempData = Buffer[cnt];
                                             tempData.spawnData.SpawnCount--;
                                             SpawnControl.CountInScene++;
