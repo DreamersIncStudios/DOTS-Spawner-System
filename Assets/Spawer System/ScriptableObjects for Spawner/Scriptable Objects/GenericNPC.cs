@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace SpawnerSystem.ScriptableObjects
 {
@@ -34,6 +35,16 @@ namespace SpawnerSystem.ScriptableObjects
             BaseColor = new Color(Random.value, Random.value, Random.value);
             _GO = Resources.Load<GameObject>("NPC/BaseNPC");
 
+        }
+
+        public static GameObject SpawnGO(Gender gender, Vector3 position) 
+        {
+            GenericNPC test = new GenericNPC(gender);
+            GameObject GOtest = Object.Instantiate(test.GO, position + new Vector3(0, 0, 0), Quaternion.identity);
+            GOtest.GetComponent<Renderer>().material.color = test.BaseColor;
+            GOtest.GetComponent<CharacterStats>().Name = test.Name;
+
+            return GOtest;
         }
 
     }

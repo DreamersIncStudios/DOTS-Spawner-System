@@ -12,10 +12,13 @@ namespace SpawnerSystem.WorldLevel
         public int MaxNpcCount;
         public int CurrentNpcCount;
         public int CurrentCitizenNPCCount;
-        
+        int CitizenCapRoom => CitizenNPCCount - CurrentCitizenNPCCount;
+        public bool SpawnCitizen => CitizenCapRoom > 0;
+
         public int EnemyNPCCount;
-        public int CitizenNPCCount { get { return MaxNpcCount - EnemyNPCCount; } }
-        public int SpawnCount { get { return MaxNpcCount - CurrentNpcCount; } }
+        public int CitizenNPCCount => MaxNpcCount - EnemyNPCCount; 
+        int SpawnCount => MaxNpcCount - CurrentNpcCount;
+        public bool SpawnEnemyNPC => SpawnCount > 0;
 
     }
 

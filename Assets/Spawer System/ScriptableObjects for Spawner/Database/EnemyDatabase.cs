@@ -51,7 +51,7 @@ namespace SpawnerSystem
         static public List<Droppable> droppables;
         static public bool isLoaded { get; private set; } = false;
 
-        static private void ValidateDatebase()
+        static private void ValidateDatabase()
         {
             if (droppables== null) 
                 droppables= new List<Droppable>();
@@ -64,7 +64,7 @@ namespace SpawnerSystem
         }
         static public void LoadDatabaseForce()
         {
-            ValidateDatebase();
+            ValidateDatabase();
             isLoaded = true;
             RecoveryItemSO[] resources = Resources.LoadAll<RecoveryItemSO>(@"Item");
             foreach (RecoveryItemSO item  in resources)
@@ -82,7 +82,7 @@ namespace SpawnerSystem
 
         static public Droppable GetItem(int SpawnID)
         {
-            ValidateDatebase();
+            ValidateDatabase();
             LoadDatabase();
             foreach (Droppable drop in droppables)
             {

@@ -130,8 +130,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 124836800}
-  - component: {fileID: 124836799}
   - component: {fileID: 124836801}
+  - component: {fileID: 124836799}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 124836798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc05ae31e68fc14baa8f2becb169488, type: 3}
+  m_Script: {fileID: 11500000, guid: 7208da50780fc764bab4590c6457d634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Squad1: {fileID: 11400000, guid: e39f6abbed650ed4ebdde7806648ac77, type: 2}

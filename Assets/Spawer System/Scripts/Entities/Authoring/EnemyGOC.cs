@@ -15,7 +15,7 @@ namespace SpawnerSystem
         [HideInInspector] public Entity reference;
         public bool DestroyGO;
 
-        [SerializeField] public List<ItemSpawnData> LootTable;
+        [SerializeField] List<ItemSpawnData> LootTable;
         public uint numOfDropitems =1;
         public List<ItemSpawnData> Dropped { get; set; }
 
@@ -36,7 +36,7 @@ namespace SpawnerSystem
         void DestroyEnemy()
         {
             EntityManager mgr = World.DefaultGameObjectInjectionWorld.EntityManager;
-            spawnItemDropSpawnPoint(mgr);   
+            SpawnItemDropSpawnPoint(mgr);   
             
             mgr.AddComponentData(reference, new Destroytag() { delay = 0.0f });
 
@@ -45,7 +45,7 @@ namespace SpawnerSystem
 
         }
 
-        void spawnItemDropSpawnPoint(EntityManager MGR) {
+        void SpawnItemDropSpawnPoint(EntityManager MGR) {
 
 
             Entity entity = MGR.CreateEntity();

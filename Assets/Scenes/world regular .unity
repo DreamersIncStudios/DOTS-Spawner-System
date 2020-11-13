@@ -171,9 +171,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &173436487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,9 +247,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &178804476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,9 +406,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &298277784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,9 +482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &314637631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &377295262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,9 +621,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &624632046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,9 +710,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &631860977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,9 +878,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &851190697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,9 +1062,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &977223479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1138,9 +1138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &1050318083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,9 +1214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &1235060893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,9 +1290,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &1288930805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,9 +1417,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &1342345106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,9 +1563,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &1462224208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1639,9 +1639,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &1623549176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,9 +1906,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Values:
   - SpawnID: 1
-    SpawnCount: 0
+    SpawnCount: 20
   - SpawnID: 3
-    SpawnCount: 0
+    SpawnCount: 20
 --- !u!114 &2115174981
 MonoBehaviour:
   m_ObjectHideFlags: 0

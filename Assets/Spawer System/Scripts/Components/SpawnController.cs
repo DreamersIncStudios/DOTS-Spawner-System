@@ -7,7 +7,7 @@ namespace SpawnerSystem
     public class SpawnController : MonoBehaviour
     {
         [HideInInspector]public static SpawnController Instance;
-        public bool CanSpawn { get { return CountInScene < MaxCountInScene; } }
+        public bool CanSpawn =>  CountInScene < MaxCountInScene;
         public uint CountInScene;
         public uint MaxCountInScene;
         public SpawnControlMode ControlMode;
@@ -22,17 +22,6 @@ namespace SpawnerSystem
 
         }
         
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 
     public enum SpawnControlMode {

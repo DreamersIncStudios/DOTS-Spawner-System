@@ -14,10 +14,6 @@ namespace SpawnerSystem.Test
             Squad1.Spawn(this.transform.position);
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+ 
     }
 }
