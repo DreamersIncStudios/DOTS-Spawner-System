@@ -64,8 +64,8 @@ namespace SpawnerSystem.WaveSystem {
                                         SpawnCount = count,
                                         SpawnID = baseEnemy.EnemyId,
                                         count = dispatched,
-                                        chunkEnemyBuffer = GetArchetypeChunkBufferType<EnemySpawnData>(),
-                                        C1 = GetArchetypeChunkComponentType<EnemySpawnTag>()
+                                        chunkEnemyBuffer = GetBufferTypeHandle<EnemySpawnData>(),
+                                        C1 = GetComponentTypeHandle<EnemySpawnTag>()
                                     };
 
                                     JobHandle handle = testing.Schedule(m_Group);
@@ -141,8 +141,8 @@ namespace SpawnerSystem.WaveSystem {
         public int SpawnID;
         public int SpawnCount;
         public NativeArray<int> count;
-        public ArchetypeChunkBufferType<EnemySpawnData> chunkEnemyBuffer;
-        public ArchetypeChunkComponentType<EnemySpawnTag> C1;
+        public BufferTypeHandle<EnemySpawnData> chunkEnemyBuffer;
+        public ComponentTypeHandle<EnemySpawnTag> C1;
         public void Execute(ArchetypeChunk chunk, int chunkIndex, int firstEntityIndex)
         {
             var EnemyBuffer2 = chunk.GetBufferAccessor(chunkEnemyBuffer);

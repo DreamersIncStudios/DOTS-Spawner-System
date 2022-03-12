@@ -97,7 +97,7 @@ namespace SpawnerSystem.Loot
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
-            EntityCommandBuffer.Concurrent CommandBuffer = end.CreateCommandBuffer().ToConcurrent();
+            EntityCommandBuffer.ParallelWriter CommandBuffer = end.CreateCommandBuffer().AsParallelWriter();
             JobHandle CreateLootTable = Entities
                 .WithNativeDisableParallelForRestriction(CommandBuffer)
                 .ForEach((Entity entity, int nativeThreadIndex, DynamicBuffer<ItemSpawnData> DropItems, ref CreateLootTableTag Enemy, ref ProbTotal prob) =>

@@ -16,7 +16,7 @@ namespace SpawnerSystem
         public bool DestroyGO;
 
         [SerializeField] List<ItemSpawnData> LootTable;
-        public uint numOfDropitems =1;
+        public uint numOfDropitems =1 ;
         public List<ItemSpawnData> Dropped { get; set; }
 
 

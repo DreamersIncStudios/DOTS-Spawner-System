@@ -15,12 +15,9 @@ namespace SpawnerSystem
             public int SpawnCount;
 
             public float probabilityWeight;
-            [HideInInspector]
-            public float probabilityPercent;
-            [HideInInspector]
-            public float probabilityRangeFrom;
-            [HideInInspector]
-            public float probabilityRangeTo;
+            public float probabilityPercent { get; set; }
+            public float probabilityRangeFrom { get; set; }
+            public float probabilityRangeTo { get; set; }
         }
         public Data spawnData;
 

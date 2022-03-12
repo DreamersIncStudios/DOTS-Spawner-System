@@ -82,16 +82,15 @@ namespace SpawnerSystem
 
                     if (Areas.SpawnEnemyNPC)
                     {
-                        Entities.ForEach((Entity SPEntity, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
+                        Entities.ForEach((DynamicBuffer<EnemySpawnData> Buffer, ref EnemySpawnTag Tag, ref LocalToWorld transform)=>
                         {
                             float3 displacementFromCenterOfArea = transform.Position - TempArea.CenterPostion;
-
+                            BufferFromEntity<EnemySpawnData> dataBuffer = GetBufferFromEntity<EnemySpawnData>();
                             if (Mathf.Abs(displacementFromCenterOfArea.x) < TempArea.MaxDisplacementFromCenter.x && Mathf.Abs(displacementFromCenterOfArea.y) < TempArea.MaxDisplacementFromCenter.y && Mathf.Abs(displacementFromCenterOfArea.z) < TempArea.MaxDisplacementFromCenter.z)
                             {
-
-                                DynamicBuffer<EnemySpawnData> Buffer = EntityManager.GetBuffer<EnemySpawnData>(SPEntity);
-                                for (int cnt = 0; cnt < Buffer.Length; cnt++)
-                                {
+                  
+                                    for (int cnt = 0; cnt < Buffer.Length; cnt++)
+                                    {
                                         if (RandomPoint(transform.Position, 10.5f, out Vector3 SpawnPoint))
                                         {
                                             EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID).Spawn(SpawnPoint);
@@ -100,7 +99,8 @@ namespace SpawnerSystem
                                             SpawnControl.CountInScene++;
                                             Buffer[cnt] = tempData;
                                         }
-                                }
+                                    } 
+                                
                             }
                         });
 
@@ -132,6 +132,8 @@ namespace SpawnerSystem
        
 
     }
+
+
 
 
 }

@@ -4,14 +4,7 @@ namespace SpawnerSystem {
     [System.Serializable]
     [GenerateAuthoringComponent]
     public struct EnemySpawnData : IBufferElementData
-    { [System.Serializable]
-       public struct Data
-        {
-
-            public int SpawnID;
-            public bool Spawn { get { return SpawnCount > 0; } }
-            public int SpawnCount;
-        }
+    { 
         public Data spawnData;
    
 
@@ -20,6 +13,13 @@ namespace SpawnerSystem {
         public static implicit operator EnemySpawnData(Data e) { return new EnemySpawnData { spawnData = e }; }
     }
 
+    [System.Serializable]
+    public struct Data
+    {
 
+        public int SpawnID;
+        public bool Spawn { get { return SpawnCount > 0; } }
+        public int SpawnCount;
+    }
 
 }
