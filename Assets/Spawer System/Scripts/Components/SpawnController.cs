@@ -26,6 +26,7 @@ namespace SpawnerSystem
 
     public enum SpawnControlMode {
         Game,
-        WaveGen
+        WaveGen,
+        DestoryTowers
     }
 }

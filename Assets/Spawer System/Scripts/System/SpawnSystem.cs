@@ -31,6 +31,12 @@ namespace SpawnerSystem
 
             if (SpawnControl.CanSpawn)
             {
+                switch (SpawnControl.ControlMode) {
+                    case SpawnControlMode.DestoryTowers:
+                        SpawnEnemyNPCS();
+                        break;
+                }
+
                 Entities.ForEach((ref WorldSpawn Areas) =>
                 {
                     //Areas.CurrentNpcCount = 0;
@@ -112,7 +118,26 @@ namespace SpawnerSystem
         
         }
 
+        void SpawnEnemyNPCS() {
+            Entities.ForEach((DynamicBuffer<EnemySpawnData> Buffer, ref EnemySpawnTag Tag, ref LocalToWorld transform) =>
+            {
+          
+                    for (int cnt = 0; cnt < Buffer.Length; cnt++)
+                    {
+                        if (RandomPoint(transform.Position, 10.5f, out Vector3 SpawnPoint))
+                        {
+                            EnemyDatabase.GetEnemy(Buffer[cnt].spawnData.SpawnID).Spawn(SpawnPoint);
+                            EnemySpawnData tempData = Buffer[cnt];
+                            tempData.spawnData.SpawnCount--;
+                            SpawnControl.CountInScene++;
+                            Buffer[cnt] = tempData;
+                        }
+                    }
 
+                
+            });
+
+        }
         bool RandomPoint(Vector3 center, float range, out Vector3 result)
         {
             for (int i = 0; i < 30; i++)

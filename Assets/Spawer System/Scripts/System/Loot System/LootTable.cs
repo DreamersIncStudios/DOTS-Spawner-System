@@ -34,7 +34,7 @@ namespace SpawnerSystem.Loot
             Entities.ForEach((Entity entity, ref SelectADropTag DropInfo, ref ProbTotal prob, ref LocalToWorld Pos, ref ItemSpawnTag Tag) =>
             {
 
-                int Scnt = new int();
+               // int Scnt = new int();
                 DynamicBuffer<ItemSpawnData> Buffer = EntityManager.GetBuffer<ItemSpawnData>(entity);
                 List<ItemSpawnData> Dropped = new List<ItemSpawnData>();
                 for (int cnt = 0; cnt < DropInfo.NumOfDrops; cnt++)
@@ -48,12 +48,12 @@ namespace SpawnerSystem.Loot
                         if (pickedNumber > Drop.spawnData.probabilityRangeFrom && pickedNumber < Drop.spawnData.probabilityRangeTo)
                         {
                             Dropped.Add(Drop);
-                            goto top;
+                            if (Dropped.Count >= DropInfo.NumOfDrops)
+                                break;
                         }
 
                     }
-                    top:
-                    Scnt++; // this need to be refactor for a do check ;
+                  //  Scnt++; // this need to be refactor for a do check ;
                 }
                 foreach (ItemSpawnData Item in Dropped)
                 {
