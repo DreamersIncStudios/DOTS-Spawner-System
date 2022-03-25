@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
-using SpawnerSystem.Loot;
 using Utilities.ECS;
 
 
@@ -28,53 +27,7 @@ namespace SpawnerSystem
                        reference = entity;
         }
 
-        public void Update()
-        {
-            if (DestroyGO)
-                DestroyEnemy();
-        }
-        void DestroyEnemy()
-        {
-            EntityManager mgr = World.DefaultGameObjectInjectionWorld.EntityManager;
-            SpawnItemDropSpawnPoint(mgr);   
-            
-            mgr.AddComponentData(reference, new Destroytag() { delay = 0.0f });
 
-            SpawnController.Instance.CountInScene--;
-            Destroy(this.gameObject);
-
-        }
-
-        void SpawnItemDropSpawnPoint(EntityManager MGR) {
-
-
-            Entity entity = MGR.CreateEntity();
-            MGR.AddComponentData(entity, new SpawnPointComponent()
-            {
-                Temporoary = true,
-                SpawnPointID = 10000
-            });
-            MGR.AddComponentData(entity, new SelectADropTag() { NumOfDrops = numOfDropitems });
-
-            DynamicBuffer<ItemSpawnData> Buffer = MGR.AddBuffer<ItemSpawnData>(entity);
-
-            // Change to a custom input.
-
-            foreach (ItemSpawnData loot in LootTable)
-            {
-                Buffer.Add(loot);
-            }
-            MGR.AddComponentData(entity, new ItemSpawnTag());
-            MGR.AddComponent<CreateLootTableTag>(entity);
-            var position = transform.TransformPoint(this.transform.position);
-            MGR.AddComponentData(entity, new Translation() { Value = position });
-            MGR.AddComponentData(entity, new LocalToWorld() { Value = transform.localToWorldMatrix});
-            MGR.AddComponentData(entity, new ProbTotal() { probabilityTotalWeight = 0.0f });
-
-            MGR.SetName(entity,"Loot Spawn Point");// This wont build why ?
-
-
-        }
 
     }
 

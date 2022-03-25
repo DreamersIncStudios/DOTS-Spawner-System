@@ -83,7 +83,6 @@
     <Compile Include="Assets\Spawer System\ScriptableObjects for Spawner\Components\LeaderComponent.cs" />
     <Compile Include="Assets\Spawer System\Scripts\System\SpawnSystem.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint\ItemSpawnData.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\System\Loot System\LootTable.cs" />
     <Compile Include="Assets\Spawer System\ScriptableObjects for Spawner\Scriptable Objects\SpawnableSO.cs" />
     <Compile Include="Assets\Spawer System\ScriptableObjects for Spawner\Editor\ScriptableObjectUtility.cs" />
     <Compile Include="Assets\Spawer System\ScriptableObjects for Spawner\Scriptable Objects\GenericNPC.cs" />
@@ -95,8 +94,6 @@
     <Compile Include="Assets\Spawer System\Scripts\Components\NPC Type Tags\EnemyTag.cs" />
     <Compile Include="Assets\Spawer System\Scripts\Components\SpawnPoint\SpawnTags\NPCSpawnTag.cs" />
     <Compile Include="Assets\Spawer System\ScriptableObjects for Spawner\Database\EnemyDatabase.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\System\Loot System\LootTableSO.cs" />
-    <Compile Include="Assets\Spawer System\Scripts\System\Loot System\LootManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Spawer System\Spawner System.asmdef" />

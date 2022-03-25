@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c254fb0e7302a3242b229b5ecc0b416a, type: 3}
   m_Name: test
   m_EditorClassIdentifier: 
+  ItemsToDrop:
+  - Item: {fileID: 0}
+    probabilityWeight: 30
+  - Item: {fileID: 0}
+    probabilityWeight: 10
+  probabilityWeight: 0

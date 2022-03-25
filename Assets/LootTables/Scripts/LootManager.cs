@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace SpawnerSystem.Loot
 {
     public class LootManager : MonoBehaviour
     {
 
-        List<LootTableSO> lootTables;
-        int tableIndex;
+        [SerializeField] List<LootTableSO> lootTables;
+        [SerializeField] int Exp, Gold;
+       
         float probabilityTotalWeight;
 
-        public void Setup(List<LootTableSO> LootTables)
+        public void Setup(List<LootTableSO> LootTables, int Gold = 0, int Exp =0 )
         {
             lootTables = new List<LootTableSO>();
             foreach (LootTableSO table in LootTables)
@@ -20,8 +20,13 @@ namespace SpawnerSystem.Loot
                 lootTables.Add(Instantiate(table));
             }
             CreateLootTable();
+            this.Exp = Exp;
+            this.Gold = Gold;
         }
-
+        private void OnValidate()
+        {
+            CreateLootTable();
+        }
         public void DropItems(int numOfDrop)
         {
 
@@ -33,7 +38,7 @@ namespace SpawnerSystem.Loot
             PickedTable().AddItemsToInventory(numOfDrop);
 
         }
-
+        public void StealItem() { }
 
         void CreateLootTable()
         {
