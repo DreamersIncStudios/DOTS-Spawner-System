@@ -9,6 +9,12 @@ namespace SpawnerSystem.Loot
     public class LootTableSO : ScriptableObject
     {
         public List<LootDrop> ItemsToDrop;
+
+        public float probabilityWeight;
+        public float probabilityPercent { get; set; }
+        public float probabilityRangeFrom { get; set; }
+        public float probabilityRangeTo { get; set; }
+
         float probabilityTotalWeight;
         /// <summary>
         /// Items to be random drop in Game world when GO is destroyed.
@@ -123,7 +129,6 @@ namespace SpawnerSystem.Loot
         public struct LootDrop
         {
             public ScriptableObject Item;
-            public int SpawnCount;
 
             public float probabilityWeight;
             public float probabilityPercent { get; set; }
